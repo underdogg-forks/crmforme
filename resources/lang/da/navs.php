@@ -1,7 +1,5 @@
 <?php
-
 return [
-
     /*
     |--------------------------------------------------------------------------
     | Navs Language Lines
@@ -12,18 +10,15 @@ return [
     | found in a intuitive way.
     |
     */
-
     'general' => [
         'home' => 'Hjem',
         'logout' => 'Log ud',
     ],
-
     'frontend' => [
         'dashboard' => 'Betjeningspanel',
         'login' => 'Log ind',
         'macros' => 'Makroer',
         'register' => 'Opret',
-
         'user' => [
             'administration' => 'Administration',
             'change_password' => 'Skift adgangskode',

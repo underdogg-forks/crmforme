@@ -1,5 +1,4 @@
 <?php
-
 namespace App\Http\Controllers\Frontend\Auth;
 
 use App\Http\Controllers\Controller;
@@ -25,7 +24,6 @@ class AuthController extends Controller
     {
         //Where to redirect after logging out
         $this->redirectAfterLogout = route('frontend.index');
-
         $this->user = $user;
     }
 
@@ -38,7 +36,6 @@ class AuthController extends Controller
         if (access()->allow('view-backend')) {
             return route('admin.dashboard');
         }
-        
         return route('frontend.user.dashboard');
     }
 }

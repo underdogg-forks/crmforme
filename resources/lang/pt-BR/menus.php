@@ -1,7 +1,5 @@
 <?php
-
 return [
-
     /*
     |--------------------------------------------------------------------------
     | Menus Language Lines
@@ -12,11 +10,9 @@ return [
     | found in a intuitive way.
     |
     */
-
     'backend' => [
         'access' => [
             'title' => 'Gerenciamento de Usuários',
-
             'roles' => [
                 'all' => 'Todos os Papéis',
                 'create' => 'Criar Papel',
@@ -24,7 +20,6 @@ return [
                 'management' => 'Gerenciamento de Papéis',
                 'main' => 'Papéis',
             ],
-
             'users' => [
                 'all' => 'Todos os Usuários',
                 'change-password' => 'Alterar Senha',
@@ -35,19 +30,16 @@ return [
                 'main' => 'Usuários',
             ],
         ],
-
         'log-viewer' => [
             'main' => 'Visualizador de Log',
             'dashboard' => 'Painel de Controle',
             'logs' => 'Logs',
         ],
-
         'sidebar' => [
             'dashboard' => 'Painel de Controle',
             'general' => 'Geral',
         ],
     ],
-
     'language-picker' => [
         'language' => 'Idioma',
         /**

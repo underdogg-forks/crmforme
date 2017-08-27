@@ -1,7 +1,5 @@
 <?php
-
 return [
-
     /*
     |--------------------------------------------------------------------------
     | Alert Language Lines
@@ -12,14 +10,12 @@ return [
     | according to your application's requirements.
     |
     */
-
     'backend' => [
         'roles' => [
             'created' => 'Rollen har nu skapats.',
             'deleted' => 'Rollen har nu raderats.',
             'updated' => 'Rollen har nu uppdaterats.',
         ],
-
         'users' => [
             'confirmation_email' => 'Ett nytt bekräftelsemail har nu skickats till den angivna e-postadressen.',
             'created' => 'Användaren har nu skapats.',

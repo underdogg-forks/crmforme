@@ -1,9 +1,7 @@
 <?php
-
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Database\Eloquent\Model;
-
 
 class DatabaseSeeder extends Seeder
 {
@@ -15,10 +13,8 @@ class DatabaseSeeder extends Seeder
     public function run()
     {
         Model::unguard();
-
         $this->call(AccessTableSeeder::class);
         $this->call(HistoryTypeTableSeeder::class);
-
         Model::reguard();
     }
 }

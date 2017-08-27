@@ -1,7 +1,5 @@
 <?php
-
 return [
-
     /*
     |--------------------------------------------------------------------------
     | View to Bind JavaScript Vars To
@@ -14,7 +12,6 @@ return [
     |
     */
     'bind_js_vars_to_this_view' => 'frontend.layouts.master',
-
     /*
     |--------------------------------------------------------------------------
     | JavaScript Namespace
@@ -26,5 +23,4 @@ return [
     |
     */
     'js_namespace' => 'window'
-
 ];

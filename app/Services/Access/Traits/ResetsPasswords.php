@@ -1,5 +1,4 @@
 <?php
-
 namespace App\Services\Access\Traits;
 
 use Illuminate\Mail\Message;
@@ -16,14 +15,6 @@ trait ResetsPasswords
     use RedirectsUsers;
 
     /**
-     * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
-     */
-    public function showLinkRequestForm()
-    {
-        return view('frontend.auth.passwords.email');
-    }
-
-    /**
      * @param SendResetLinkEmailRequest $request
      * @return $this|\Illuminate\Http\RedirectResponse
      */
@@ -32,29 +23,34 @@ trait ResetsPasswords
         $response = Password::sendResetLink($request->only('email'), function (Message $message) {
             $message->subject(trans('strings.emails.auth.password_reset_subject'));
         });
-
         switch ($response) {
             case Password::RESET_LINK_SENT:
                 return redirect()->back()->with('status', trans($response));
-
             case Password::INVALID_USER:
                 return redirect()->back()->withErrors(['email' => trans($response)]);
         }
     }
 
-	/**
-	 * @param null $token
-	 * @return $this|\Illuminate\Contracts\View\Factory|\Illuminate\View\View
-	 */
-	public function showResetForm($token = null)
+    /**
+     * @param null $token
+     * @return $this|\Illuminate\Contracts\View\Factory|\Illuminate\View\View
+     */
+    public function showResetForm($token = null)
     {
         if (is_null($token)) {
             return $this->showLinkRequestForm();
         }
-
         return view('frontend.auth.passwords.reset')
             ->withToken($token)
-			->withEmail($this->user->getEmailForPasswordToken($token));
+            ->withEmail($this->user->getEmailForPasswordToken($token));
+    }
+
+    /**
+     * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
+     */
+    public function showLinkRequestForm()
+    {
+        return view('frontend.auth.passwords.email');
     }
 
     /**
@@ -66,15 +62,12 @@ trait ResetsPasswords
         $credentials = $request->only(
             'email', 'password', 'password_confirmation', 'token'
         );
-
         $response = Password::reset($credentials, function ($user, $password) {
             $this->resetPassword($user, $password);
         });
-
         switch ($response) {
             case Password::PASSWORD_RESET:
                 return redirect($this->redirectPath())->with('status', trans($response));
-
             default:
                 return redirect()->back()
                     ->withInput($request->only('email'))

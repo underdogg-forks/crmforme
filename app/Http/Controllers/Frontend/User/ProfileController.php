@@ -1,5 +1,4 @@
 <?php
-
 namespace App\Http\Controllers\Frontend\User;
 
 use App\Http\Controllers\Controller;
@@ -22,7 +21,7 @@ class ProfileController extends Controller
     }
 
     /**
-     * @param  UserRepositoryContract         $user
+     * @param  UserRepositoryContract $user
      * @param  UpdateProfileRequest $request
      * @return mixed
      */

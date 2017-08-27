@@ -1,7 +1,5 @@
 <?php
-
 return [
-
     /*
     |--------------------------------------------------------------------------
     | History Language Lines
@@ -11,13 +9,11 @@ return [
     | system adding lines to the history table.
     |
     */
-
     'backend' => [
         'none' => 'ไม่มีประวัติล่าสุด',
         'none_for_type' => 'ไม่มีประวัติประเภทนี้',
         'none_for_entity' => "ไม่มีประวัติสำหรับ :entity นี้",
         'recent_history' => 'ประวัติล่าสุด',
-
         'roles' => [
             'created' => 'ได้สร้างบทบาท',
             'deleted' => 'ได้ลบบทบาท',

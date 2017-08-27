@@ -1,7 +1,5 @@
 <?php
-
 return [
-
     /*
     |--------------------------------------------------------------------------
     | Menus Language Lines
@@ -12,11 +10,9 @@ return [
     | found in a intuitive way.
     |
     */
-
     'backend' => [
         'access' => [
             'title' => 'Gestione accessi',
-
             'roles' => [
                 'all' => 'Tutti i ruoli',
                 'create' => 'Crea ruolo',
@@ -24,7 +20,6 @@ return [
                 'management' => 'Gestione ruoli',
                 'main' => 'Ruoli',
             ],
-
             'users' => [
                 'all' => 'Tutti gli utenti',
                 'change-password' => 'Cambia password',
@@ -35,19 +30,16 @@ return [
                 'main' => 'Utenti',
             ],
         ],
-
         'log-viewer' => [
             'main' => 'Log',
             'dashboard' => 'Dashboard',
             'logs' => 'Logs',
         ],
-
         'sidebar' => [
             'dashboard' => 'Dashboard',
             'general' => 'Generale',
         ],
     ],
-
     'language-picker' => [
         'language' => 'Lingua',
         /**

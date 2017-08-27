@@ -1,5 +1,4 @@
 <?php
-
 namespace App\Events\Frontend\Auth;
 
 use App\Events\Event;

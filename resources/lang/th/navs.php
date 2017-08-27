@@ -1,7 +1,5 @@
 <?php
-
 return [
-
     /*
     |--------------------------------------------------------------------------
     | Navs Language Lines
@@ -12,18 +10,15 @@ return [
     | found in a intuitive way.
     |
     */
-
     'general' => [
         'home' => 'หน้าแรก',
         'logout' => 'ออกจากระบบ',
     ],
-
     'frontend' => [
         'dashboard' => 'แผงควบคุม',
         'login' => 'เข้าสู่ระบบ',
         'macros' => 'Macros',
         'register' => 'ลงทะเบียน',
-
         'user' => [
             'administration' => 'หน้าแอดมิน',
             'change_password' => 'เปลี่ยนรหัสผ่าน',

@@ -1,5 +1,4 @@
 <?php
-
 namespace App\Repositories\Backend\Access\Role;
 
 use App\Models\Access\Role\Role;
@@ -11,20 +10,20 @@ use App\Models\Access\Role\Role;
 interface RoleRepositoryContract
 {
 
-	/**
+    /**
      * @return mixed
      */
     public function getCount();
 
-	/**
+    /**
      * @return mixed
      */
     public function getForDataTable();
 
     /**
-     * @param  string  $order_by
-     * @param  string  $sort
-     * @param  bool    $withPermissions
+     * @param  string $order_by
+     * @param  string $sort
+     * @param  bool $withPermissions
      * @return mixed
      */
     public function getAllRoles($order_by = 'id', $sort = 'asc', $withPermissions = false);
@@ -48,7 +47,7 @@ interface RoleRepositoryContract
      */
     public function destroy(Role $role);
 
-	/**
+    /**
      * @return mixed
      */
     public function getDefaultUserRole();

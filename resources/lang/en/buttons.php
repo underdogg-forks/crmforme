@@ -1,7 +1,5 @@
 <?php
-
 return [
-
     /*
     |--------------------------------------------------------------------------
     | Buttons Language Lines
@@ -12,7 +10,6 @@ return [
     | found in a intuitive way.
     |
     */
-
     'backend' => [
         'access' => [
             'users' => [
@@ -26,17 +23,14 @@ return [
             ],
         ],
     ],
-
     'general' => [
         'cancel' => 'Cancel',
-
         'crud' => [
             'create' => 'Create',
             'delete' => 'Delete',
             'edit' => 'Edit',
             'update' => 'Update',
         ],
-
         'save' => 'Save',
         'view' => 'View',
     ],

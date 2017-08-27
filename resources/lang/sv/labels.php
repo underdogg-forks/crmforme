@@ -1,7 +1,5 @@
 <?php
-
 return [
-
     /*
     |--------------------------------------------------------------------------
     | Labels Language Lines
@@ -12,7 +10,6 @@ return [
     | found in a intuitive way.
     |
     */
-
     'general' => [
         'all' => 'Alla',
         'yes' => 'Ja',
@@ -28,14 +25,12 @@ return [
         'show' => 'Visa',
         'toggle_navigation' => 'Växla navigering',
     ],
-
     'backend' => [
         'access' => [
             'roles' => [
                 'create' => 'Skapa roll',
                 'edit' => 'Redigera roll',
                 'management' => 'Hantera roller',
-
                 'table' => [
                     'number_of_users' => 'Antal användare',
                     'permissions' => 'Tillstånd',
@@ -44,7 +39,6 @@ return [
                     'total' => 'roll totalt|roller totalt',
                 ],
             ],
-
             'users' => [
                 'active' => 'Aktiverade användare',
                 'all_permissions' => 'Alla tillstånd',
@@ -58,7 +52,6 @@ return [
                 'no_permissions' => 'Inga tillstånd',
                 'no_roles' => 'Inga roller att anta.',
                 'permissions' => 'Tillstånd',
-
                 'table' => [
                     'confirmed' => 'Bekräftad',
                     'created' => 'Skapad',
@@ -74,9 +67,7 @@ return [
             ],
         ],
     ],
-
     'frontend' => [
-
         'auth' => [
             'login_box_title' => 'Logga in',
             'login_button' => 'Logga in',
@@ -85,14 +76,12 @@ return [
             'register_button' => 'Registrera',
             'remember_me' => 'Kom ihåg mig',
         ],
-
         'passwords' => [
             'forgot_password' => 'Glömt lösenordet?',
             'reset_password_box_title' => 'Återställ lösenord',
             'reset_password_button' => 'Återställ lösenord',
             'send_password_reset_link_button' => 'Skicka länk för att återställa lösenordet.',
         ],
-
         'macros' => [
             'country' => [
                 'alpha' => 'Land Alpha koder',
@@ -100,9 +89,7 @@ return [
                 'alpha3' => 'Land Alpha 3 koder',
                 'numeric' => 'Land sifferkod',
             ],
-
             'macro_examples' => 'Macro exempel',
-
             'state' => [
                 'mexico' => 'Mexicos stater',
                 'us' => [
@@ -111,19 +98,15 @@ return [
                     'armed' => 'US Armed Forces',
                 ],
             ],
-
             'territories' => [
                 'canada' => 'Kanadas provinser och områden',
             ],
-
             'timezone' => 'Tidszoner',
         ],
-
         'user' => [
             'passwords' => [
                 'change' => 'Byt lösenord',
             ],
-
             'profile' => [
                 'avatar' => 'Profilbild',
                 'created_at' => 'Skapad',
@@ -134,6 +117,5 @@ return [
                 'update_information' => 'Uppdatera profil',
             ],
         ],
-
     ],
 ];

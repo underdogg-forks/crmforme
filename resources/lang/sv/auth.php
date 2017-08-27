@@ -1,7 +1,5 @@
 <?php
-
 return [
-
     /*
     |--------------------------------------------------------------------------
     | Authentication Language Lines
@@ -12,7 +10,6 @@ return [
     | these language lines according to your application's requirements.
     |
     */
-
     'failed' => 'Dessa uppgifter stämmer inte överens med vårt register.',
     'general_error' => 'Du har inte tillstånd att göra det där.',
     'socialite' => [

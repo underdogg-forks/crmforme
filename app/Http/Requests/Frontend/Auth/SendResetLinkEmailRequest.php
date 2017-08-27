@@ -1,5 +1,4 @@
 <?php
-
 namespace App\Http\Requests\Frontend\Auth;
 
 use App\Http\Requests\Request;

@@ -1,7 +1,5 @@
 <?php
-
 return [
-
     /*
     |--------------------------------------------------------------------------
     | Exception Language Lines
@@ -12,7 +10,6 @@ return [
     | found in a intuitive way.
     |
     */
-
     'backend' => [
         'access' => [
             'roles' => [
@@ -25,7 +22,6 @@ return [
                 'not_found' => 'Questo ruolo non esiste.',
                 'update_error' => "C'è stato un problema durante l'aggiornamento di questo ruolo. Si prega di riprovare più tardi.",
             ],
-
             'users' => [
                 'cant_deactivate_self' => 'Non puoi eseguire questa operazione su te stesso.',
                 'cant_delete_self' => 'Non puoi cancellare te stesso.',
@@ -42,7 +38,6 @@ return [
             ],
         ],
     ],
-
     'frontend' => [
         'auth' => [
             'confirmation' => [
@@ -55,15 +50,11 @@ return [
                 'success' => "Il tuo account è stato confermato con successo!",
                 'resent' => "Una nuova e-mail di conferma è stata inviata all'indirizzo registrato.",
             ],
-
             'deactivated' => 'Il tuo account è stato disattivato.',
             'email_taken' => 'Questo indirizzo e-mail è stato già utilizzato.',
-
             'password' => [
                 'change_mismatch' => 'Questa non è la tua vecchia password.',
             ],
-
-
         ],
     ],
 ];

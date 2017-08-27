@@ -1,7 +1,5 @@
 <?php
-
 return [
-
     /*
     |--------------------------------------------------------------------------
     | Alert Language Lines
@@ -12,14 +10,12 @@ return [
     | according to your application's requirements.
     |
     */
-
     'backend' => [
         'roles' => [
             'created' => 'Rolle erstellt.',
             'deleted' => 'Rolle gelöscht.',
             'updated' => 'Rolle aktualisiert.',
         ],
-
         'users' => [
             'confirmation_email' => 'Eine Aktivierungsmail wurde an die angegebene E-Mailadresse gesendet.',
             'created' => 'Benutzer erstellt.',

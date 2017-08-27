@@ -1,5 +1,4 @@
 <?php
-
 namespace App\Http\Middleware;
 
 use Closure;
@@ -11,7 +10,7 @@ use Closure;
 class RouteNeedsRole
 {
 
-	/**
+    /**
      * @param $request
      * @param Closure $next
      * @param $role
@@ -32,14 +31,11 @@ class RouteNeedsRole
              */
             $access = access()->hasRole($role);
         }
-
-
-        if (! $access) {
+        if (!$access) {
             return redirect()
                 ->route('frontend.index')
                 ->withFlashDanger(trans('auth.general_error'));
         }
-
         return $next($request);
     }
 }

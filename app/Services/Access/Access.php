@@ -1,7 +1,5 @@
 <?php
-
 namespace App\Services\Access;
-
 /**
  * Class Access
  * @package App\Services\Access
@@ -26,14 +24,6 @@ class Access
     }
 
     /**
-     * Get the currently authenticated user or null.
-     */
-    public function user()
-    {
-        return auth()->user();
-    }
-
-    /**
      * Return if the current session user is a guest or not
      * @return mixed
      */
@@ -42,7 +32,7 @@ class Access
         return auth()->guest();
     }
 
-	/**
+    /**
      * @return mixed
      */
     public function logout()
@@ -59,11 +49,12 @@ class Access
         return auth()->id();
     }
 
-	/**
+    /**
      * @param $id
      * @return mixed
      */
-    public function loginUsingId($id) {
+    public function loginUsingId($id)
+    {
         return auth()->loginUsingId($id);
     }
 
@@ -78,14 +69,21 @@ class Access
         if ($user = $this->user()) {
             return $user->hasRole($role);
         }
-
         return false;
+    }
+
+    /**
+     * Get the currently authenticated user or null.
+     */
+    public function user()
+    {
+        return auth()->user();
     }
 
     /**
      * Checks if the user has either one or more, or all of an array of roles
      * @param  $roles
-     * @param  bool     $needsAll
+     * @param  bool $needsAll
      * @return bool
      */
     public function hasRoles($roles, $needsAll = false)
@@ -95,11 +93,18 @@ class Access
             if (!is_array($roles)) {
                 $roles = array($roles);
             }
-
             return $user->hasRoles($roles, $needsAll);
         }
-
         return false;
+    }
+
+    /**
+     * @param  $permission
+     * @return bool
+     */
+    public function hasPermission($permission)
+    {
+        return $this->allow($permission);
     }
 
     /**
@@ -113,8 +118,17 @@ class Access
         if ($user = $this->user()) {
             return $user->allow($permission);
         }
-
         return false;
+    }
+
+    /**
+     * @param  $permissions
+     * @param  $needsAll
+     * @return bool
+     */
+    public function hasPermissions($permissions, $needsAll = false)
+    {
+        return $this->allowMultiple($permissions, $needsAll);
     }
 
     /**
@@ -130,29 +144,8 @@ class Access
             if (!is_array($permissions)) {
                 $permissions = array($permissions);
             }
-
             return $user->allowMultiple($permissions, $needsAll);
         }
-
         return false;
-    }
-
-    /**
-     * @param  $permission
-     * @return bool
-     */
-    public function hasPermission($permission)
-    {
-        return $this->allow($permission);
-    }
-
-    /**
-     * @param  $permissions
-     * @param  $needsAll
-     * @return bool
-     */
-    public function hasPermissions($permissions, $needsAll = false)
-    {
-        return $this->allowMultiple($permissions, $needsAll);
     }
 }

@@ -1,5 +1,4 @@
 <?php
-
 namespace App\Http\Requests\Frontend\Auth;
 
 use App\Http\Requests\Request;
@@ -28,7 +27,7 @@ class LoginRequest extends Request
     public function rules()
     {
         return [
-            'email'    => 'required|email',
+            'email' => 'required|email',
             'password' => 'required',
             'g-recaptcha-response' => 'required_if:captcha_status,true|captcha',
         ];
@@ -37,7 +36,8 @@ class LoginRequest extends Request
     /**
      * @return array
      */
-    public function messages() {
+    public function messages()
+    {
         return [
             'g-recaptcha-response.required_if' => trans('validation.required', ['attribute' => 'captcha']),
         ];

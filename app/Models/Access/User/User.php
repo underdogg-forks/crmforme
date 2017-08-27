@@ -1,5 +1,4 @@
 <?php
-
 namespace App\Models\Access\User;
 
 use App\Models\Access\User\Traits\UserAccess;

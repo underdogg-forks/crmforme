@@ -1,5 +1,4 @@
 <?php
-
 namespace App\Providers;
 
 use Illuminate\Contracts\Events\Dispatcher as DispatcherContract;
@@ -16,35 +15,32 @@ class EventServiceProvider extends ServiceProvider
         //
     ];
 
-	/**
+    /**
      * Class event subscribers
      * @var array
      */
     protected $subscribe = [
-		/**
-		 * Frontend Subscribers
-		 */
-
-		/**
-		 * Auth Subscribers
-		 */
-		\App\Listeners\Frontend\Auth\UserEventListener::class,
-
-		/**
-		 * Backend Subscribers
-		 */
-
-		/**
-		 * Access Subscribers
-		 */
+        /**
+         * Frontend Subscribers
+         */
+        /**
+         * Auth Subscribers
+         */
+        \App\Listeners\Frontend\Auth\UserEventListener::class,
+        /**
+         * Backend Subscribers
+         */
+        /**
+         * Access Subscribers
+         */
         \App\Listeners\Backend\Access\User\UserEventListener::class,
-		\App\Listeners\Backend\Access\Role\RoleEventListener::class,
+        \App\Listeners\Backend\Access\Role\RoleEventListener::class,
     ];
 
     /**
      * Register any other events for your application.
      *
-     * @param  \Illuminate\Contracts\Events\Dispatcher  $events
+     * @param  \Illuminate\Contracts\Events\Dispatcher $events
      * @return void
      */
     public function boot(DispatcherContract $events)

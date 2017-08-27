@@ -1,7 +1,5 @@
 <?php
-
 return [
-
     /*
     |--------------------------------------------------------------------------
     | Labels Language Lines
@@ -12,7 +10,6 @@ return [
     | found in a intuitive way.
     |
     */
-
     'general' => [
         'all' => 'Tutti',
         'yes' => 'Sì',
@@ -28,14 +25,12 @@ return [
         'show' => 'Visualizza',
         'toggle_navigation' => 'Menu Navigazione',
     ],
-
     'backend' => [
         'access' => [
             'roles' => [
                 'create' => 'Crea ruolo',
                 'edit' => 'Modifica ruolo',
                 'management' => 'Gestione ruolo',
-
                 'table' => [
                     'number_of_users' => 'Numero di utenti',
                     'permissions' => 'Permessi',
@@ -44,7 +39,6 @@ return [
                     'total' => 'Ruolo|Totale ruoli',
                 ],
             ],
-
             'users' => [
                 'active' => 'Utenti attivi',
                 'all_permissions' => 'Tutti i permessi',
@@ -58,7 +52,6 @@ return [
                 'no_permissions' => 'Nessun permesso',
                 'no_roles' => 'Nessuno ruolo da assegnare.',
                 'permissions' => 'Permessi',
-
                 'table' => [
                     'confirmed' => 'Confermato',
                     'created' => 'Creato',
@@ -74,9 +67,7 @@ return [
             ],
         ],
     ],
-
     'frontend' => [
-
         'auth' => [
             'login_box_title' => 'Login',
             'login_button' => 'Login',
@@ -85,14 +76,12 @@ return [
             'register_button' => 'Registrati',
             'remember_me' => 'Ricordami',
         ],
-
         'passwords' => [
             'forgot_password' => 'Password dimenticata?',
             'reset_password_box_title' => 'Reset password',
             'reset_password_button' => 'Reset password',
             'send_password_reset_link_button' => 'Invia link per il reset della password',
         ],
-
         'macros' => [
             'country' => [
                 'alpha' => 'Codici di Paese alfabetici',
@@ -100,9 +89,7 @@ return [
                 'alpha3' => 'Codici di Paese alfabetici 3',
                 'numeric' => 'Codici di Paese numerici',
             ],
-
             'macro_examples' => 'Esempi di macro',
-
             'state' => [
                 'mexico' => 'Elenco di stati del Messico',
                 'us' => [
@@ -111,19 +98,15 @@ return [
                     'armed' => 'Forze armate USA',
                 ],
             ],
-
             'territories' => [
                 'canada' => 'Province e Territori del Canada',
             ],
-
             'timezone' => 'Fuso orario',
         ],
-
         'user' => [
             'passwords' => [
                 'change' => 'Change Password',
             ],
-
             'profile' => [
                 'avatar' => 'Avatar',
                 'created_at' => 'Data di creazione',
@@ -134,6 +117,5 @@ return [
                 'update_information' => 'Aggiorna informazioni',
             ],
         ],
-
     ],
 ];

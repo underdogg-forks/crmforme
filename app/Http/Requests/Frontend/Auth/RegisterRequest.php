@@ -1,5 +1,4 @@
 <?php
-
 namespace App\Http\Requests\Frontend\Auth;
 
 use App\Http\Requests\Request;
@@ -35,10 +34,11 @@ class RegisterRequest extends Request
         ];
     }
 
-	/**
+    /**
      * @return array
      */
-    public function messages() {
+    public function messages()
+    {
         return [
             'g-recaptcha-response.required_if' => trans('validation.required', ['attribute' => 'captcha']),
         ];

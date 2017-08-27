@@ -1,7 +1,5 @@
 <?php
-
 return [
-
     /*
     |--------------------------------------------------------------------------
     | Strings Language Lines
@@ -12,7 +10,6 @@ return [
     | found in a intuitive way.
     |
     */
-
     'backend' => [
         'access' => [
             'users' => [
@@ -21,12 +18,10 @@ return [
                 'restore_user_confirm' => 'Benutzer in den Originalzustand wiederherstellen?',
             ],
         ],
-
         'dashboard' => [
             'title' => 'Administratives Dashboard',
             'welcome' => 'Wilkommen',
         ],
-
         'general' => [
             'all_rights_reserved' => 'Alle Rechte vorbehalten.',
             'are_you_sure' => 'Bist du dir sicher?',
@@ -36,18 +31,15 @@ return [
             'minutes' => ' minutes',
             'search_placeholder' => 'Suchen...',
             'timeout' => 'You were automatically logged out for security reasons since you had no activity in ',
-
             'see_all' => [
                 'messages' => 'Alle Nachrichten anzeigen',
                 'notifications' => 'Alle anzeigen',
                 'tasks' => 'Alle Aufgaben anzeigen',
             ],
-
             'status' => [
                 'online' => 'Online',
                 'offline' => 'Offline',
             ],
-
             'you_have' => [
                 'messages' => '{0} Du hast keine Nachrichten|{1} Du hast 1 Nachricht|[2,Inf] Du hast :number Nachrichten',
                 'notifications' => '{0} Du hast keine Benachrichtigungen|{1} Du hast 1 Benachrichtigung|[2,Inf] Du hast :number Benachrichtigungen',
@@ -55,31 +47,24 @@ return [
             ],
         ],
     ],
-
     'emails' => [
         'auth' => [
             'password_reset_subject' => 'Dein Link zum zurücksetzen des Passworts',
             'reset_password' => 'klick hier um dein Passwort zurückzusetzen',
         ],
     ],
-
     'frontend' => [
         'email' => [
             'confirm_account' => 'Klick hier um deinen Account zu aktivieren:',
         ],
-
         'test' => 'Test',
-
         'tests' => [
             'based_on' => [
                 'permission' => 'Anhand von Berechtigungen - ',
                 'role' => 'Anhand von Rollen - ',
             ],
-
             'js_injected_from_controller' => 'Javascript von einem Controller Eingefügt',
-
             'using_blade_extensions' => 'Verwenden von Blade-Erweiterungen',
-
             'using_access_helper' => [
                 'array_permissions' => 'Verwenden von Access Helper mit Array von Berechtigungs-Namen oder ID\'s bei der der Benutzer alle besitzen muss.',
                 'array_permissions_not' => 'Verwenden von Access Helper mit Array von Berechtigungs-Namen oder ID\'s bei der der Benutzer nicht alle besitzen muss.',
@@ -90,17 +75,14 @@ return [
                 'role_id' => 'Vverwenden von Access Helper mit Rollen-ID',
                 'role_name' => 'Verwenden von Access Helper mit Rollen-Name',
             ],
-
             'view_console_it_works' => 'Schaue in die Konsole, du solltest \'it works!\' sehen, welches vom FrontendController@index kommt',
             'you_can_see_because' => 'Du kannst dies sehen, da du folgende Rolle besitzt \':role\'!',
             'you_can_see_because_permission' => 'Du kannst dies sehen, da du folgende Berechtigung besitzt \':permission\'!',
         ],
-
         'user' => [
             'profile_updated' => 'Profil aktualisiert.',
             'password_updated' => 'Passwort aktualisiert.',
         ],
-
         'welcome_to' => 'Wilkommen bei :place',
     ],
 ];

@@ -1,5 +1,4 @@
 <?php
-
 namespace App\Exceptions\Backend\Access\User;
 
 use Exception;

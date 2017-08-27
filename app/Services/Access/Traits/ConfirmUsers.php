@@ -1,7 +1,5 @@
 <?php
-
 namespace App\Services\Access\Traits;
-
 /**
  * Class ConfirmUsers
  * @package App\Services\Access\Traits

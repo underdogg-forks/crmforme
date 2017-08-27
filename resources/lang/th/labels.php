@@ -1,7 +1,5 @@
 <?php
-
 return [
-
     /*
     |--------------------------------------------------------------------------
     | Labels Language Lines
@@ -12,7 +10,6 @@ return [
     | found in a intuitive way.
     |
     */
-
     'general' => [
         'all' => 'ทั้งหมด',
         'yes' => 'ใช่',
@@ -28,14 +25,12 @@ return [
         'show' => 'แสดง',
         'toggle_navigation' => 'เปิด/ปิด เมนูนำทาง',
     ],
-
     'backend' => [
         'access' => [
             'roles' => [
                 'create' => 'สร้างบทบาท',
                 'edit' => 'แก้ไขบทบบาท',
                 'management' => 'การจัดการบทบาท',
-
                 'table' => [
                     'number_of_users' => 'จำนวนผู้ใช้',
                     'permissions' => 'สิทธิ์',
@@ -44,7 +39,6 @@ return [
                     'total' => 'บทบาททั้งหมด|บทบาททั้งหมด',
                 ],
             ],
-
             'users' => [
                 'active' => 'ผู้ใช้',
                 'all_permissions' => 'สิทธิ์ทั้งหมด',
@@ -58,7 +52,6 @@ return [
                 'no_permissions' => 'ไม่มีสิทธิ์',
                 'no_roles' => 'ไม่มีบทบาทให้เลือก',
                 'permissions' => 'สิทธิ์',
-
                 'table' => [
                     'confirmed' => 'ยืนยันแล้ว',
                     'created' => 'สร้างเมื่อ',
@@ -74,9 +67,7 @@ return [
             ],
         ],
     ],
-
     'frontend' => [
-
         'auth' => [
             'login_box_title' => 'เข้าสู่ระบบ',
             'login_button' => 'เข้าสู่ระบบ',
@@ -85,14 +76,12 @@ return [
             'register_button' => 'ลงทะเบียน',
             'remember_me' => 'จดจำฉัน',
         ],
-
         'passwords' => [
             'forgot_password' => 'ลืมรหัสผ่าน?',
             'reset_password_box_title' => 'รีเซ็ตรหัสผ่าน',
             'reset_password_button' => 'รีเซ็ตรหัสผ่าน',
             'send_password_reset_link_button' => 'ส่งลิงก์สำหรับรีเซ็ตรหัสผ่าน',
         ],
-
         'macros' => [
             'country' => [
                 'alpha' => 'รหัสประเทศชนิดตัวอักษร',
@@ -100,9 +89,7 @@ return [
                 'alpha3' => 'รหัสประเทศชนิดสามตัวอักษร',
                 'numeric' => 'รหัสประเทศชนิดตัวเลข',
             ],
-
             'macro_examples' => 'ตัวอย่าง Macro',
-
             'state' => [
                 'mexico' => 'รายชื่อรัฐในเม็กซิโก',
                 'us' => [
@@ -111,19 +98,15 @@ return [
                     'armed' => 'กองทัพสหรัฐ',
                 ],
             ],
-
             'territories' => [
                 'canada' => 'จังหวัดและอาณาเขตของแคนาดา',
             ],
-
             'timezone' => 'เขตเวลา',
         ],
-
         'user' => [
             'passwords' => [
                 'change' => 'เปลี่ยนรหัสผ่าน',
             ],
-
             'profile' => [
                 'avatar' => 'Avatar',
                 'created_at' => 'สร้างเมื่อ',
@@ -134,6 +117,5 @@ return [
                 'update_information' => 'อัพเดทข้อมูล',
             ],
         ],
-
     ],
 ];

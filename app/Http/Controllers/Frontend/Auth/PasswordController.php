@@ -1,5 +1,4 @@
 <?php
-
 namespace App\Http\Controllers\Frontend\Auth;
 
 use App\Http\Controllers\Controller;
@@ -23,7 +22,6 @@ class PasswordController extends Controller
     {
         //Where to redirect the user after their password has been successfully reset
         $this->redirectTo = route('frontend.user.dashboard');
-        
         $this->user = $user;
     }
 }

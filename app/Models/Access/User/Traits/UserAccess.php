@@ -1,43 +1,11 @@
 <?php
-
 namespace App\Models\Access\User\Traits;
-
 /**
  * Class UserAccess
  * @package App\Models\Access\User\Traits
  */
 trait UserAccess
 {
-    /**
-     * Checks if the user has a Role by its name or id.
-     *
-     * @param  string $nameOrId Role name or id.
-     * @return bool
-     */
-    public function hasRole($nameOrId)
-    {
-        foreach ($this->roles as $role) {
-            //See if role has all permissions
-            if ($role->all) {
-                return true;
-            }
-
-            //First check to see if it's an ID
-            if (is_numeric($nameOrId)) {
-                if ($role->id == $nameOrId) {
-                    return true;
-                }
-            }
-
-            //Otherwise check by name
-            if ($role->name == $nameOrId) {
-                return true;
-            }
-        }
-
-        return false;
-    }
-
     /**
      * Checks to see if user has array of roles
      *
@@ -52,16 +20,13 @@ trait UserAccess
         if ($needsAll) {
             $hasRoles = 0;
             $numRoles = count($roles);
-
             foreach ($roles as $role) {
                 if ($this->hasRole($role)) {
                     $hasRoles++;
                 }
             }
-
             return $numRoles == $hasRoles;
         }
-
         //User has to possess one of the roles specified
         $hasRoles = 0;
         foreach ($roles as $role) {
@@ -70,8 +35,43 @@ trait UserAccess
             }
 
         }
-
         return $hasRoles > 0;
+    }
+
+    /**
+     * Checks if the user has a Role by its name or id.
+     *
+     * @param  string $nameOrId Role name or id.
+     * @return bool
+     */
+    public function hasRole($nameOrId)
+    {
+        foreach ($this->roles as $role) {
+            //See if role has all permissions
+            if ($role->all) {
+                return true;
+            }
+            //First check to see if it's an ID
+            if (is_numeric($nameOrId)) {
+                if ($role->id == $nameOrId) {
+                    return true;
+                }
+            }
+            //Otherwise check by name
+            if ($role->name == $nameOrId) {
+                return true;
+            }
+        }
+        return false;
+    }
+
+    /**
+     * @param  $nameOrId
+     * @return bool
+     */
+    public function hasPermission($nameOrId)
+    {
+        return $this->allow($nameOrId);
     }
 
     /**
@@ -87,25 +87,31 @@ trait UserAccess
             if ($role->all) {
                 return true;
             }
-
             // Validate against the Permission table
             foreach ($role->permissions as $perm) {
-
                 //First check to see if it's an ID
                 if (is_numeric($nameOrId)) {
                     if ($perm->id == $nameOrId) {
                         return true;
                     }
                 }
-
                 //Otherwise check by name
                 if ($perm->name == $nameOrId) {
                     return true;
                 }
             }
         }
-
         return false;
+    }
+
+    /**
+     * @param  $permissions
+     * @param  bool $needsAll
+     * @return bool
+     */
+    public function hasPermissions($permissions, $needsAll = false)
+    {
+        return $this->allowMultiple($permissions, $needsAll);
     }
 
     /**
@@ -121,16 +127,13 @@ trait UserAccess
         if ($needsAll) {
             $hasPermissions = 0;
             $numPermissions = count($permissions);
-
             foreach ($permissions as $perm) {
                 if ($this->allow($perm)) {
                     $hasPermissions++;
                 }
             }
-
             return $numPermissions == $hasPermissions;
         }
-
         //User has to possess one of the permissions specified
         $hasPermissions = 0;
         foreach ($permissions as $perm) {
@@ -138,71 +141,13 @@ trait UserAccess
                 $hasPermissions++;
             }
         }
-
         return $hasPermissions > 0;
-    }
-
-    /**
-     * @param  $nameOrId
-     * @return bool
-     */
-    public function hasPermission($nameOrId)
-    {
-        return $this->allow($nameOrId);
-    }
-
-    /**
-     * @param  $permissions
-     * @param  bool           $needsAll
-     * @return bool
-     */
-    public function hasPermissions($permissions, $needsAll = false)
-    {
-        return $this->allowMultiple($permissions, $needsAll);
-    }
-
-    /**
-     * Alias to eloquent many-to-many relation's attach() method.
-     *
-     * @param  mixed  $role
-     * @return void
-     */
-    public function attachRole($role)
-    {
-        if (is_object($role)) {
-            $role = $role->getKey();
-        }
-
-        if (is_array($role)) {
-            $role = $role['id'];
-        }
-
-        $this->roles()->attach($role);
-    }
-
-    /**
-     * Alias to eloquent many-to-many relation's detach() method.
-     *
-     * @param  mixed  $role
-     * @return void
-     */
-    public function detachRole($role)
-    {
-        if (is_object($role)) {
-            $role = $role->getKey();
-        }
-
-        if (is_array($role)) {
-            $role = $role['id'];
-        }
-
-        $this->roles()->detach($role);
     }
 
     /**
      * Attach multiple roles to a user
      *
-     * @param  mixed  $roles
+     * @param  mixed $roles
      * @return void
      */
     public function attachRoles($roles)
@@ -213,9 +158,26 @@ trait UserAccess
     }
 
     /**
+     * Alias to eloquent many-to-many relation's attach() method.
+     *
+     * @param  mixed $role
+     * @return void
+     */
+    public function attachRole($role)
+    {
+        if (is_object($role)) {
+            $role = $role->getKey();
+        }
+        if (is_array($role)) {
+            $role = $role['id'];
+        }
+        $this->roles()->attach($role);
+    }
+
+    /**
      * Detach multiple roles from a user
      *
-     * @param  mixed  $roles
+     * @param  mixed $roles
      * @return void
      */
     public function detachRoles($roles)
@@ -223,5 +185,22 @@ trait UserAccess
         foreach ($roles as $role) {
             $this->detachRole($role);
         }
+    }
+
+    /**
+     * Alias to eloquent many-to-many relation's detach() method.
+     *
+     * @param  mixed $role
+     * @return void
+     */
+    public function detachRole($role)
+    {
+        if (is_object($role)) {
+            $role = $role->getKey();
+        }
+        if (is_array($role)) {
+            $role = $role['id'];
+        }
+        $this->roles()->detach($role);
     }
 }

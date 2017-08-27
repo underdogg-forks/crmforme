@@ -1,7 +1,5 @@
 <?php
-
 return [
-
     /*
     |--------------------------------------------------------------------------
     | Labels Language Lines
@@ -12,7 +10,6 @@ return [
     | found in a intuitive way.
     |
     */
-
     'general' => [
         'all' => 'Todos',
         'yes' => 'Sí',
@@ -28,14 +25,12 @@ return [
         'show' => 'Mostrar',
         'toggle_navigation' => 'Abrir/Cerrar menú de navegación',
     ],
-
     'backend' => [
         'access' => [
             'roles' => [
                 'create' => 'Crear Rol',
                 'edit' => 'Modificar Rol',
                 'management' => 'Administración de Roles',
-
                 'table' => [
                     'number_of_users' => 'Número de Usuarios',
                     'permissions' => 'Permisos',
@@ -44,7 +39,6 @@ return [
                     'total' => 'Todos los Roles',
                 ],
             ],
-
             'users' => [
                 'active' => 'Usuarios activos',
                 'all_permissions' => 'Todos los Permisos',
@@ -58,7 +52,6 @@ return [
                 'no_permissions' => 'Sin Permisos',
                 'no_roles' => 'No hay Roles disponibles.',
                 'permissions' => 'Permisos',
-
                 'table' => [
                     'confirmed' => 'Confirmado',
                     'created' => 'Creado',
@@ -74,9 +67,7 @@ return [
             ],
         ],
     ],
-
     'frontend' => [
-
         'auth' => [
             'login_box_title' => 'Iniciar Sesión',
             'login_button' => 'Iniciar Sesión',
@@ -85,14 +76,12 @@ return [
             'register_button' => 'Registrarse',
             'remember_me' => 'Recordarme',
         ],
-
         'passwords' => [
             'forgot_password' => 'Se ha olvidado la contraseña?',
             'reset_password_box_title' => 'Reiniciar contraseña',
             'reset_password_button' => 'Reiniciar contraseña',
             'send_password_reset_link_button' => 'Enviar el correo de verificación',
         ],
-
         'macros' => [
             'country' => [
                 'alpha' => 'Código Alfa de País',
@@ -100,9 +89,7 @@ return [
                 'alpha3' => 'Código Alfa 3 de País',
                 'numeric' => 'Código Numérico de País',
             ],
-
             'macro_examples' => 'Ejemplos de Macro',
-
             'state' => [
                 'mexico' => 'Listado de Estados de México',
                 'us' => [
@@ -111,19 +98,15 @@ return [
                     'armed' => 'Fuerzas Armadas de Estados Unidos',
                 ],
             ],
-
             'territories' => [
                 'canada' => 'Listado de Provincias y Territorios de Canada',
             ],
-
             'timezone' => 'Zonas horarias',
         ],
-
         'user' => [
             'passwords' => [
                 'change' => 'Cambiar la contraseña',
             ],
-
             'profile' => [
                 'avatar' => 'Avatar',
                 'created_at' => 'Creado el',
@@ -134,6 +117,5 @@ return [
                 'update_information' => 'Actualizar la información',
             ],
         ],
-
     ],
 ];

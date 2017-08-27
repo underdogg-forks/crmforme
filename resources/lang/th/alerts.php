@@ -1,7 +1,5 @@
 <?php
-
 return [
-
     /*
     |--------------------------------------------------------------------------
     | Alert Language Lines
@@ -12,14 +10,12 @@ return [
     | according to your application's requirements.
     |
     */
-
     'backend' => [
         'roles' => [
             'created' => 'บทบาทถูกสร้างสำเร็จแล้ว',
             'deleted' => 'บทบาทถูกลบสำเร็จแล้ว',
             'updated' => 'บทบาทถูกแก้ไขสำเร็จแล้ว',
         ],
-
         'users' => [
             'confirmation_email' => 'อีเมลยืนยันตัวตนได้ถูกส่งไปยังปลายทางแล้ว',
             'created' => 'ผู้ใช้ถูกสร้างสำเร็จแล้ว',

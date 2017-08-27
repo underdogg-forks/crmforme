@@ -1,7 +1,5 @@
 <?php
-
 namespace App\Services\Access\Traits;
-
 trait RedirectsUsers
 {
     /**

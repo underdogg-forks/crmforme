@@ -1,7 +1,5 @@
 <?php
-
 return [
-
     /*
     |--------------------------------------------------------------------------
     | Labels Language Lines
@@ -12,7 +10,6 @@ return [
     | found in a intuitive way.
     |
     */
-
     'general' => [
         'all' => 'Alle',
         'yes' => 'Ja',
@@ -28,14 +25,12 @@ return [
         'show' => 'Vis',
         'toggle_navigation' => 'Navigation',
     ],
-
     'backend' => [
         'access' => [
             'roles' => [
                 'create' => 'Opret Rolle',
                 'edit' => 'Opdater Rolle',
                 'management' => 'Rolleadministration',
-
                 'table' => [
                     'number_of_users' => 'Antal Brugere',
                     'permissions' => 'Rettigheder',
@@ -44,7 +39,6 @@ return [
                     'total' => 'rolle i alt|roller i alt',
                 ],
             ],
-
             'users' => [
                 'active' => 'Aktive Brugere',
                 'all_permissions' => 'Alle Rettigheder',
@@ -58,7 +52,6 @@ return [
                 'no_permissions' => 'Ingen Rettigheder',
                 'no_roles' => 'Ingen Rolle valgt.',
                 'permissions' => 'Rettigheder',
-
                 'table' => [
                     'confirmed' => 'Bekræftet',
                     'created' => 'Oprettet',
@@ -74,9 +67,7 @@ return [
             ],
         ],
     ],
-
     'frontend' => [
-
         'auth' => [
             'login_box_title' => 'Log ind',
             'login_button' => 'Log ind',
@@ -85,14 +76,12 @@ return [
             'register_button' => 'Opret',
             'remember_me' => 'Husk mig',
         ],
-
         'passwords' => [
             'forgot_password' => 'Glemt din adgangskode?',
             'reset_password_box_title' => 'Nulstil adgangskode',
             'reset_password_button' => 'Nulstil adgangskode',
             'send_password_reset_link_button' => 'Send link til at nulstille adgangskoden',
         ],
-
         'macros' => [
             'country' => [
                 'alpha' => 'Landekoder',
@@ -100,9 +89,7 @@ return [
                 'alpha3' => 'Landekode (Alfa-3)',
                 'numeric' => 'Landekoder (Numerisk)',
             ],
-
             'macro_examples' => 'Eksempler på Makroer',
-
             'state' => [
                 'mexico' => 'Mexicos stater',
                 'us' => [
@@ -111,19 +98,15 @@ return [
                     'armed' => 'Amerikanske væbnede styrker',
                 ],
             ],
-
             'territories' => [
                 'canada' => 'Canada\'s provinser og territorier',
             ],
-
             'timezone' => 'Tidszone',
         ],
-
         'user' => [
             'passwords' => [
                 'change' => 'Skift adgangskode',
             ],
-
             'profile' => [
                 'avatar' => 'Avatar',
                 'created_at' => 'Oprettet den',
@@ -134,6 +117,5 @@ return [
                 'update_information' => 'Opdater information',
             ],
         ],
-
     ],
 ];

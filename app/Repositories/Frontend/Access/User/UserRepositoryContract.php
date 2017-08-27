@@ -1,7 +1,5 @@
 <?php
-
 namespace App\Repositories\Frontend\Access\User;
-
 /**
  * Interface UserRepositoryContract
  * @package App\Repositories\Frontend\User
@@ -26,11 +24,11 @@ interface UserRepositoryContract
      */
     public function findByToken($token);
 
-	/**
-	 * @param $token
-	 * @return mixed
-	 */
-	public function getEmailForPasswordToken($token);
+    /**
+     * @param $token
+     * @return mixed
+     */
+    public function getEmailForPasswordToken($token);
 
     /**
      * @param array $data

@@ -1,5 +1,4 @@
 <?php
-
 /**
  * Sets the specified locale to the session
  */

@@ -1,5 +1,4 @@
 <?php
-
 namespace App\Http\Controllers\Frontend;
 
 use App\Http\Controllers\Controller;
@@ -18,7 +17,6 @@ class FrontendController extends Controller
         javascript()->put([
             'test' => 'it works!',
         ]);
-
         return view('frontend.index');
     }
 

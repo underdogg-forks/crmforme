@@ -1,7 +1,5 @@
 <?php
-
 return [
-
     /**
      * Skin for Admin LTE backend theme
      *
@@ -21,7 +19,6 @@ return [
      * yellow-light
      */
     'theme' => 'blue',
-
     /**
      * Layout for the Admin LTE backend theme
      *

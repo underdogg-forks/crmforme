@@ -1,5 +1,4 @@
 <?php
-
 namespace App\Repositories\Backend\Access\Permission;
 
 use App\Models\Access\Permission\Permission;
@@ -11,7 +10,7 @@ use App\Models\Access\Permission\Permission;
 class EloquentPermissionRepository implements PermissionRepositoryContract
 {
 
-	/**
+    /**
      * @param string $order_by
      * @param string $sort
      * @return mixed

@@ -1,5 +1,4 @@
 <?php
-
 namespace App\Http\Requests\Backend\Access\User;
 
 use App\Http\Requests\Request;
@@ -29,7 +28,7 @@ class UpdateUserRequest extends Request
     {
         return [
             'email' => 'required|email',
-            'name'  => 'required',
+            'name' => 'required',
         ];
     }
 }

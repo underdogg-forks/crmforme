@@ -1,7 +1,5 @@
 <?php
-
 namespace App\Models\Access\Permission\Traits\Relationship;
-
 /**
  * Class PermissionRelationship
  * @package App\Models\Access\Permission\Traits\Relationship

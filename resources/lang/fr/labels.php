@@ -1,7 +1,5 @@
 <?php
-
 return [
-
     /*
     |--------------------------------------------------------------------------
     | Labels Language Lines
@@ -12,7 +10,6 @@ return [
     | found in a intuitive way.
     |
     */
-
     'general' => [
         'all' => 'Tout',
         'yes' => 'Oui',
@@ -28,14 +25,12 @@ return [
         'show' => 'Voir',
         'toggle_navigation' => 'Navigation',
     ],
-
     'backend' => [
         'access' => [
             'roles' => [
                 'create' => 'Créer un rôle',
                 'edit' => 'Editer un rôle',
                 'management' => 'Gestion des rôles',
-
                 'table' => [
                     'number_of_users' => "Nombre d'utilisateurs",
                     'permissions' => 'Permissions',
@@ -44,7 +39,6 @@ return [
                     'total' => 'rôle total|rôles total',
                 ],
             ],
-
             'users' => [
                 'active' => 'Utilisateurs actifs',
                 'all_permissions' => 'Toutes les permissions',
@@ -58,7 +52,6 @@ return [
                 'no_permissions' => 'Aucune permission',
                 'no_roles' => 'Aucun rôle à affecter.',
                 'permissions' => 'Permissions',
-
                 'table' => [
                     'confirmed' => 'Confirmé',
                     'created' => 'Création',
@@ -74,9 +67,7 @@ return [
             ],
         ],
     ],
-
     'frontend' => [
-
         'auth' => [
             'login_box_title' => 'Connexion',
             'login_button' => "Entrer",
@@ -85,14 +76,12 @@ return [
             'register_button' => 'Créer le compte',
             'remember_me' => 'Se souvenir de moi',
         ],
-
         'passwords' => [
             'forgot_password' => 'Avez-vous oublié votre mot de passe&nbsp;?',
             'reset_password_box_title' => 'Réinitialisation du mot de passe',
             'reset_password_button' => 'Réinitialiser le mot de passe',
             'send_password_reset_link_button' => 'Envoyer le lien de réinitialisation',
         ],
-
         'macros' => [
             'country' => [
                 'alpha' => 'Pays Alpha Codes',
@@ -100,9 +89,7 @@ return [
                 'alpha3' => 'Pays Alpha 3 Codes',
                 'numeric' => 'Pays Numéros Codes',
             ],
-
             'macro_examples' => 'Exemples de macros',
-
             'state' => [
                 'mexico' => 'Mexico State List',
                 'us' => [
@@ -111,19 +98,15 @@ return [
                     'armed' => 'US Armed Forces',
                 ],
             ],
-
             'territories' => [
                 'canada' => 'Canada Province & Territories List',
             ],
-
             'timezone' => 'Fuseau horaire',
         ],
-
         'user' => [
             'passwords' => [
                 'change' => 'Modifier le mot de passe',
             ],
-
             'profile' => [
                 'avatar' => 'Avatar',
                 'created_at' => 'Date de création',
@@ -134,6 +117,5 @@ return [
                 'update_information' => 'Mettre à jour les informations',
             ],
         ],
-
     ],
 ];

@@ -1,5 +1,4 @@
 <?php
-
 namespace App\Http\Requests\Backend\Access\Role;
 
 use App\Http\Requests\Request;

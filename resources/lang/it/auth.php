@@ -1,7 +1,5 @@
 <?php
-
 return [
-
     /*
     |--------------------------------------------------------------------------
     | Authentication Language Lines
@@ -12,7 +10,6 @@ return [
     | these language lines according to your application's requirements.
     |
     */
-
     'failed' => 'Le credenziali non corrispondono a quelle registrate.',
     'general_error' => 'Non hai diritti sufficienti per questa operazione.',
     'socialite' => [

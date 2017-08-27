@@ -1,7 +1,5 @@
 <?php
-
 namespace App\Services\Macros;
-
 /**
  * Class Dropdowns
  * @package App\Services\Macros
@@ -11,8 +9,8 @@ trait Dropdowns
     /**
      * Use this to set the default country state type for the shorthand method
      * @param  $name
-     * @param  null     $selected
-     * @param  array    $options
+     * @param  null $selected
+     * @param  array $options
      * @return string
      */
     public function selectState($name, $selected = null, $options = array())
@@ -22,14 +20,14 @@ trait Dropdowns
 
     /**
      * @param  $name
-     * @param  null     $selected
-     * @param  array    $options
+     * @param  null $selected
+     * @param  array $options
      * @return string
      */
     public function selectStateUS($name, $selected = null, $options = array())
     {
         $list = [
-            ''   => 'Select One...',
+            '' => 'Select One...',
             'AL' => 'Alabama',
             'AK' => 'Alaska',
             'AZ' => 'Arizona',
@@ -82,20 +80,19 @@ trait Dropdowns
             'WI' => 'Wisconsin',
             'WY' => 'Wyoming',
         ];
-
         return $this->select($name, $list, $selected, $options);
     }
 
     /**
      * @param  $name
-     * @param  null    $selected
-     * @param  array   $options
+     * @param  null $selected
+     * @param  array $options
      * @return mixed
      */
     public function selectStateUSOutlyingTerritories($name, $selected = null, $options = array())
     {
         $list = [
-            ''   => 'Select One...',
+            '' => 'Select One...',
             'AS' => 'American Samoa',
             'GU' => 'Guam',
             'MP' => 'Northern Mariana Islands',
@@ -103,38 +100,36 @@ trait Dropdowns
             'UM' => 'United States Minor Outlying Islands',
             'VI' => 'Virgin Islands',
         ];
-
         return $this->select($name, $list, $selected, $options);
     }
 
     /**
      * @param  $name
-     * @param  null    $selected
-     * @param  array   $options
+     * @param  null $selected
+     * @param  array $options
      * @return mixed
      */
     public function selectStateUSArmedForces($name, $selected = null, $options = array())
     {
         $list = [
-            ''   => 'Select One...',
+            '' => 'Select One...',
             'AA' => 'Armed Forces Americas',
             'AP' => 'Armed Forces Pacific',
             'AE' => 'Armed Forces Others',
         ];
-
         return $this->select($name, $list, $selected, $options);
     }
 
     /**
      * @param  $name
-     * @param  null    $selected
-     * @param  array   $options
+     * @param  null $selected
+     * @param  array $options
      * @return mixed
      */
     public function selectCanadaTerritories($name, $selected = null, $options = array())
     {
         $list = [
-            ''   => 'Select One...',
+            '' => 'Select One...',
             'AB' => 'Alberta',
             'BC' => 'British Columbia',
             'MB' => 'Manitoba',
@@ -149,20 +144,19 @@ trait Dropdowns
             'NU' => 'Nunavut',
             'YT' => 'Yukon',
         ];
-
         return $this->select($name, $list, $selected, $options);
     }
 
     /**
      * @param  $name
-     * @param  null    $selected
-     * @param  array   $options
+     * @param  null $selected
+     * @param  array $options
      * @return mixed
      */
     public function selectStateMexico($name, $selected = null, $options = array())
     {
         $list = [
-            ''    => 'Select One...',
+            '' => 'Select One...',
             'DIF' => 'Distrito Federal',
             'AGS' => 'Aguascalientes',
             'BCN' => 'Baja California',
@@ -196,15 +190,14 @@ trait Dropdowns
             'YUC' => 'Yucatan',
             'ZAC' => 'Zacatecas',
         ];
-
         return $this->select($name, $list, $selected, $options);
     }
 
     /**
      * Use this to set the default country dropdown type for the shorthand method
      * @param  $name
-     * @param  null     $selected
-     * @param  array    $options
+     * @param  null $selected
+     * @param  array $options
      * @return string
      */
     public function selectCountry($name, $selected = null, $options = array())
@@ -214,14 +207,272 @@ trait Dropdowns
 
     /**
      * @param  $name
-     * @param  null    $selected
-     * @param  array   $options
+     * @param  null $selected
+     * @param  array $options
+     * @return string
+     */
+    public function selectCountryAlpha2($name, $selected = null, $options = array())
+    {
+        $list = [
+            '' => 'Select One...',
+            'AF' => 'Afghanistan',
+            'AX' => 'Aland Islands',
+            'AL' => 'Albania',
+            'DZ' => 'Algeria',
+            'AS' => 'American Samoa',
+            'AD' => 'Andorra',
+            'AO' => 'Angola',
+            'AI' => 'Anguilla',
+            'AQ' => 'Antarctica',
+            'AG' => 'Antigua and Barbuda',
+            'AR' => 'Argentina',
+            'AM' => 'Armenia',
+            'AW' => 'Aruba',
+            'AU' => 'Australia',
+            'AT' => 'Austria',
+            'AZ' => 'Azerbaijan',
+            'BS' => 'Bahamas',
+            'BH' => 'Bahrain',
+            'BD' => 'Bangladesh',
+            'BB' => 'Barbados',
+            'BY' => 'Belarus',
+            'BE' => 'Belgium',
+            'BZ' => 'Belize',
+            'BJ' => 'Benin',
+            'BM' => 'Bermuda',
+            'BT' => 'Bhutan',
+            'BO' => 'Bolivia',
+            'BA' => 'Bosnia and Herzegovina',
+            'BW' => 'Botswana',
+            'BV' => 'Bouvet Island',
+            'BR' => 'Brazil',
+            'IO' => 'British Indian Ocean Territory',
+            'BN' => 'Brunei Darussalam',
+            'BG' => 'Bulgaria',
+            'BF' => 'Burkina Faso',
+            'BI' => 'Burundi',
+            'KH' => 'Cambodia',
+            'CM' => 'Cameroon',
+            'CA' => 'Canada',
+            'CV' => 'Cape Verde',
+            'KY' => 'Cayman Islands',
+            'CF' => 'Central African Republic',
+            'TD' => 'Chad',
+            'CL' => 'Chile',
+            'CN' => 'China',
+            'CX' => 'Christmas Island',
+            'CC' => 'Cocos (Keeling) Islands',
+            'CO' => 'Colombia',
+            'KM' => 'Comoros',
+            'CG' => 'Congo',
+            'CD' => 'Congo, The Democratic Republic of The',
+            'CK' => 'Cook Islands',
+            'CR' => 'Costa Rica',
+            'CI' => 'Cote D\'ivoire',
+            'HR' => 'Croatia',
+            'CU' => 'Cuba',
+            'CY' => 'Cyprus',
+            'CZ' => 'Czech Republic',
+            'DK' => 'Denmark',
+            'DJ' => 'Djibouti',
+            'DM' => 'Dominica',
+            'DO' => 'Dominican Republic',
+            'EC' => 'Ecuador',
+            'EG' => 'Egypt',
+            'SV' => 'El Salvador',
+            'GQ' => 'Equatorial Guinea',
+            'ER' => 'Eritrea',
+            'EE' => 'Estonia',
+            'ET' => 'Ethiopia',
+            'FK' => 'Falkland Islands (Malvinas)',
+            'FO' => 'Faroe Islands',
+            'FJ' => 'Fiji',
+            'FI' => 'Finland',
+            'FR' => 'France',
+            'GF' => 'French Guiana',
+            'PF' => 'French Polynesia',
+            'TF' => 'French Southern Territories',
+            'GA' => 'Gabon',
+            'GM' => 'Gambia',
+            'GE' => 'Georgia',
+            'DE' => 'Germany',
+            'GH' => 'Ghana',
+            'GI' => 'Gibraltar',
+            'GR' => 'Greece',
+            'GL' => 'Greenland',
+            'GD' => 'Grenada',
+            'GP' => 'Guadeloupe',
+            'GU' => 'Guam',
+            'GT' => 'Guatemala',
+            'GG' => 'Guernsey',
+            'GN' => 'Guinea',
+            'GW' => 'Guinea-bissau',
+            'GY' => 'Guyana',
+            'HT' => 'Haiti',
+            'HM' => 'Heard Island and Mcdonald Islands',
+            'VA' => 'Holy See (Vatican City State)',
+            'HN' => 'Honduras',
+            'HK' => 'Hong Kong',
+            'HU' => 'Hungary',
+            'IS' => 'Iceland',
+            'IN' => 'India',
+            'ID' => 'Indonesia',
+            'IR' => 'Iran, Islamic Republic of',
+            'IQ' => 'Iraq',
+            'IE' => 'Ireland',
+            'IM' => 'Isle of Man',
+            'IL' => 'Israel',
+            'IT' => 'Italy',
+            'JM' => 'Jamaica',
+            'JP' => 'Japan',
+            'JE' => 'Jersey',
+            'JO' => 'Jordan',
+            'KZ' => 'Kazakhstan',
+            'KE' => 'Kenya',
+            'KI' => 'Kiribati',
+            'KP' => 'Korea, Democratic People\'s Republic of',
+            'KR' => 'Korea, Republic of',
+            'KW' => 'Kuwait',
+            'KG' => 'Kyrgyzstan',
+            'LA' => 'Lao People\'s Democratic Republic',
+            'LV' => 'Latvia',
+            'LB' => 'Lebanon',
+            'LS' => 'Lesotho',
+            'LR' => 'Liberia',
+            'LY' => 'Libyan Arab Jamahiriya',
+            'LI' => 'Liechtenstein',
+            'LT' => 'Lithuania',
+            'LU' => 'Luxembourg',
+            'MO' => 'Macao',
+            'MK' => 'Macedonia, The Former Yugoslav Republic of',
+            'MG' => 'Madagascar',
+            'MW' => 'Malawi',
+            'MY' => 'Malaysia',
+            'MV' => 'Maldives',
+            'ML' => 'Mali',
+            'MT' => 'Malta',
+            'MH' => 'Marshall Islands',
+            'MQ' => 'Martinique',
+            'MR' => 'Mauritania',
+            'MU' => 'Mauritius',
+            'YT' => 'Mayotte',
+            'MX' => 'Mexico',
+            'FM' => 'Micronesia, Federated States of',
+            'MD' => 'Moldova, Republic of',
+            'MC' => 'Monaco',
+            'MN' => 'Mongolia',
+            'ME' => 'Montenegro',
+            'MS' => 'Montserrat',
+            'MA' => 'Morocco',
+            'MZ' => 'Mozambique',
+            'MM' => 'Myanmar',
+            'NA' => 'Namibia',
+            'NR' => 'Nauru',
+            'NP' => 'Nepal',
+            'NL' => 'Netherlands',
+            'AN' => 'Netherlands Antilles',
+            'NC' => 'New Caledonia',
+            'NZ' => 'New Zealand',
+            'NI' => 'Nicaragua',
+            'NE' => 'Niger',
+            'NG' => 'Nigeria',
+            'NU' => 'Niue',
+            'NF' => 'Norfolk Island',
+            'MP' => 'Northern Mariana Islands',
+            'NO' => 'Norway',
+            'OM' => 'Oman',
+            'PK' => 'Pakistan',
+            'PW' => 'Palau',
+            'PS' => 'Palestinian Territory, Occupied',
+            'PA' => 'Panama',
+            'PG' => 'Papua New Guinea',
+            'PY' => 'Paraguay',
+            'PE' => 'Peru',
+            'PH' => 'Philippines',
+            'PN' => 'Pitcairn',
+            'PL' => 'Poland',
+            'PT' => 'Portugal',
+            'PR' => 'Puerto Rico',
+            'QA' => 'Qatar',
+            'RE' => 'Reunion',
+            'RO' => 'Romania',
+            'RU' => 'Russian Federation',
+            'RW' => 'Rwanda',
+            'SH' => 'Saint Helena',
+            'KN' => 'Saint Kitts and Nevis',
+            'LC' => 'Saint Lucia',
+            'PM' => 'Saint Pierre and Miquelon',
+            'VC' => 'Saint Vincent and The Grenadines',
+            'WS' => 'Samoa',
+            'SM' => 'San Marino',
+            'ST' => 'Sao Tome and Principe',
+            'SA' => 'Saudi Arabia',
+            'SN' => 'Senegal',
+            'RS' => 'Serbia',
+            'SC' => 'Seychelles',
+            'SL' => 'Sierra Leone',
+            'SG' => 'Singapore',
+            'SK' => 'Slovakia',
+            'SI' => 'Slovenia',
+            'SB' => 'Solomon Islands',
+            'SO' => 'Somalia',
+            'ZA' => 'South Africa',
+            'GS' => 'South Georgia and The South Sandwich Islands',
+            'ES' => 'Spain',
+            'LK' => 'Sri Lanka',
+            'SD' => 'Sudan',
+            'SR' => 'Suriname',
+            'SJ' => 'Svalbard and Jan Mayen',
+            'SZ' => 'Swaziland',
+            'SE' => 'Sweden',
+            'CH' => 'Switzerland',
+            'SY' => 'Syrian Arab Republic',
+            'TW' => 'Taiwan, Province of China',
+            'TJ' => 'Tajikistan',
+            'TZ' => 'Tanzania, United Republic of',
+            'TH' => 'Thailand',
+            'TL' => 'Timor-leste',
+            'TG' => 'Togo',
+            'TK' => 'Tokelau',
+            'TO' => 'Tonga',
+            'TT' => 'Trinidad and Tobago',
+            'TN' => 'Tunisia',
+            'TR' => 'Turkey',
+            'TM' => 'Turkmenistan',
+            'TC' => 'Turks and Caicos Islands',
+            'TV' => 'Tuvalu',
+            'UG' => 'Uganda',
+            'UA' => 'Ukraine',
+            'AE' => 'United Arab Emirates',
+            'GB' => 'United Kingdom',
+            'US' => 'United States',
+            'UM' => 'United States Minor Outlying Islands',
+            'UY' => 'Uruguay',
+            'UZ' => 'Uzbekistan',
+            'VU' => 'Vanuatu',
+            'VE' => 'Venezuela',
+            'VN' => 'Viet Nam',
+            'VG' => 'Virgin Islands, British',
+            'VI' => 'Virgin Islands, U.S.',
+            'WF' => 'Wallis and Futuna',
+            'EH' => 'Western Sahara',
+            'YE' => 'Yemen',
+            'ZM' => 'Zambia',
+            'ZW' => 'Zimbabwe',
+        ];
+        return $this->select($name, $list, $selected, $options);
+    }
+
+    /**
+     * @param  $name
+     * @param  null $selected
+     * @param  array $options
      * @return mixed
      */
     public function selectCountryAlpha($name, $selected = null, $options = array())
     {
         $list = [
-            ''              => 'Select One...',
+            '' => 'Select One...',
             'ISO 3166-2:AF' => 'Afghanistan',
             'ISO 3166-2:AX' => 'Åland Islands',
             'ISO 3166-2:AL' => 'Albania',
@@ -472,279 +723,19 @@ trait Dropdowns
             'ISO 3166-2:ZM' => 'Zambia',
             'ISO 3166-2:ZW' => 'Zimbabwe',
         ];
-
         return $this->select($name, $list, $selected, $options);
     }
 
     /**
      * @param  $name
-     * @param  null     $selected
-     * @param  array    $options
-     * @return string
-     */
-    public function selectCountryAlpha2($name, $selected = null, $options = array())
-    {
-        $list = [
-            ''   => 'Select One...',
-            'AF' => 'Afghanistan',
-            'AX' => 'Aland Islands',
-            'AL' => 'Albania',
-            'DZ' => 'Algeria',
-            'AS' => 'American Samoa',
-            'AD' => 'Andorra',
-            'AO' => 'Angola',
-            'AI' => 'Anguilla',
-            'AQ' => 'Antarctica',
-            'AG' => 'Antigua and Barbuda',
-            'AR' => 'Argentina',
-            'AM' => 'Armenia',
-            'AW' => 'Aruba',
-            'AU' => 'Australia',
-            'AT' => 'Austria',
-            'AZ' => 'Azerbaijan',
-            'BS' => 'Bahamas',
-            'BH' => 'Bahrain',
-            'BD' => 'Bangladesh',
-            'BB' => 'Barbados',
-            'BY' => 'Belarus',
-            'BE' => 'Belgium',
-            'BZ' => 'Belize',
-            'BJ' => 'Benin',
-            'BM' => 'Bermuda',
-            'BT' => 'Bhutan',
-            'BO' => 'Bolivia',
-            'BA' => 'Bosnia and Herzegovina',
-            'BW' => 'Botswana',
-            'BV' => 'Bouvet Island',
-            'BR' => 'Brazil',
-            'IO' => 'British Indian Ocean Territory',
-            'BN' => 'Brunei Darussalam',
-            'BG' => 'Bulgaria',
-            'BF' => 'Burkina Faso',
-            'BI' => 'Burundi',
-            'KH' => 'Cambodia',
-            'CM' => 'Cameroon',
-            'CA' => 'Canada',
-            'CV' => 'Cape Verde',
-            'KY' => 'Cayman Islands',
-            'CF' => 'Central African Republic',
-            'TD' => 'Chad',
-            'CL' => 'Chile',
-            'CN' => 'China',
-            'CX' => 'Christmas Island',
-            'CC' => 'Cocos (Keeling) Islands',
-            'CO' => 'Colombia',
-            'KM' => 'Comoros',
-            'CG' => 'Congo',
-            'CD' => 'Congo, The Democratic Republic of The',
-            'CK' => 'Cook Islands',
-            'CR' => 'Costa Rica',
-            'CI' => 'Cote D\'ivoire',
-            'HR' => 'Croatia',
-            'CU' => 'Cuba',
-            'CY' => 'Cyprus',
-            'CZ' => 'Czech Republic',
-            'DK' => 'Denmark',
-            'DJ' => 'Djibouti',
-            'DM' => 'Dominica',
-            'DO' => 'Dominican Republic',
-            'EC' => 'Ecuador',
-            'EG' => 'Egypt',
-            'SV' => 'El Salvador',
-            'GQ' => 'Equatorial Guinea',
-            'ER' => 'Eritrea',
-            'EE' => 'Estonia',
-            'ET' => 'Ethiopia',
-            'FK' => 'Falkland Islands (Malvinas)',
-            'FO' => 'Faroe Islands',
-            'FJ' => 'Fiji',
-            'FI' => 'Finland',
-            'FR' => 'France',
-            'GF' => 'French Guiana',
-            'PF' => 'French Polynesia',
-            'TF' => 'French Southern Territories',
-            'GA' => 'Gabon',
-            'GM' => 'Gambia',
-            'GE' => 'Georgia',
-            'DE' => 'Germany',
-            'GH' => 'Ghana',
-            'GI' => 'Gibraltar',
-            'GR' => 'Greece',
-            'GL' => 'Greenland',
-            'GD' => 'Grenada',
-            'GP' => 'Guadeloupe',
-            'GU' => 'Guam',
-            'GT' => 'Guatemala',
-            'GG' => 'Guernsey',
-            'GN' => 'Guinea',
-            'GW' => 'Guinea-bissau',
-            'GY' => 'Guyana',
-            'HT' => 'Haiti',
-            'HM' => 'Heard Island and Mcdonald Islands',
-            'VA' => 'Holy See (Vatican City State)',
-            'HN' => 'Honduras',
-            'HK' => 'Hong Kong',
-            'HU' => 'Hungary',
-            'IS' => 'Iceland',
-            'IN' => 'India',
-            'ID' => 'Indonesia',
-            'IR' => 'Iran, Islamic Republic of',
-            'IQ' => 'Iraq',
-            'IE' => 'Ireland',
-            'IM' => 'Isle of Man',
-            'IL' => 'Israel',
-            'IT' => 'Italy',
-            'JM' => 'Jamaica',
-            'JP' => 'Japan',
-            'JE' => 'Jersey',
-            'JO' => 'Jordan',
-            'KZ' => 'Kazakhstan',
-            'KE' => 'Kenya',
-            'KI' => 'Kiribati',
-            'KP' => 'Korea, Democratic People\'s Republic of',
-            'KR' => 'Korea, Republic of',
-            'KW' => 'Kuwait',
-            'KG' => 'Kyrgyzstan',
-            'LA' => 'Lao People\'s Democratic Republic',
-            'LV' => 'Latvia',
-            'LB' => 'Lebanon',
-            'LS' => 'Lesotho',
-            'LR' => 'Liberia',
-            'LY' => 'Libyan Arab Jamahiriya',
-            'LI' => 'Liechtenstein',
-            'LT' => 'Lithuania',
-            'LU' => 'Luxembourg',
-            'MO' => 'Macao',
-            'MK' => 'Macedonia, The Former Yugoslav Republic of',
-            'MG' => 'Madagascar',
-            'MW' => 'Malawi',
-            'MY' => 'Malaysia',
-            'MV' => 'Maldives',
-            'ML' => 'Mali',
-            'MT' => 'Malta',
-            'MH' => 'Marshall Islands',
-            'MQ' => 'Martinique',
-            'MR' => 'Mauritania',
-            'MU' => 'Mauritius',
-            'YT' => 'Mayotte',
-            'MX' => 'Mexico',
-            'FM' => 'Micronesia, Federated States of',
-            'MD' => 'Moldova, Republic of',
-            'MC' => 'Monaco',
-            'MN' => 'Mongolia',
-            'ME' => 'Montenegro',
-            'MS' => 'Montserrat',
-            'MA' => 'Morocco',
-            'MZ' => 'Mozambique',
-            'MM' => 'Myanmar',
-            'NA' => 'Namibia',
-            'NR' => 'Nauru',
-            'NP' => 'Nepal',
-            'NL' => 'Netherlands',
-            'AN' => 'Netherlands Antilles',
-            'NC' => 'New Caledonia',
-            'NZ' => 'New Zealand',
-            'NI' => 'Nicaragua',
-            'NE' => 'Niger',
-            'NG' => 'Nigeria',
-            'NU' => 'Niue',
-            'NF' => 'Norfolk Island',
-            'MP' => 'Northern Mariana Islands',
-            'NO' => 'Norway',
-            'OM' => 'Oman',
-            'PK' => 'Pakistan',
-            'PW' => 'Palau',
-            'PS' => 'Palestinian Territory, Occupied',
-            'PA' => 'Panama',
-            'PG' => 'Papua New Guinea',
-            'PY' => 'Paraguay',
-            'PE' => 'Peru',
-            'PH' => 'Philippines',
-            'PN' => 'Pitcairn',
-            'PL' => 'Poland',
-            'PT' => 'Portugal',
-            'PR' => 'Puerto Rico',
-            'QA' => 'Qatar',
-            'RE' => 'Reunion',
-            'RO' => 'Romania',
-            'RU' => 'Russian Federation',
-            'RW' => 'Rwanda',
-            'SH' => 'Saint Helena',
-            'KN' => 'Saint Kitts and Nevis',
-            'LC' => 'Saint Lucia',
-            'PM' => 'Saint Pierre and Miquelon',
-            'VC' => 'Saint Vincent and The Grenadines',
-            'WS' => 'Samoa',
-            'SM' => 'San Marino',
-            'ST' => 'Sao Tome and Principe',
-            'SA' => 'Saudi Arabia',
-            'SN' => 'Senegal',
-            'RS' => 'Serbia',
-            'SC' => 'Seychelles',
-            'SL' => 'Sierra Leone',
-            'SG' => 'Singapore',
-            'SK' => 'Slovakia',
-            'SI' => 'Slovenia',
-            'SB' => 'Solomon Islands',
-            'SO' => 'Somalia',
-            'ZA' => 'South Africa',
-            'GS' => 'South Georgia and The South Sandwich Islands',
-            'ES' => 'Spain',
-            'LK' => 'Sri Lanka',
-            'SD' => 'Sudan',
-            'SR' => 'Suriname',
-            'SJ' => 'Svalbard and Jan Mayen',
-            'SZ' => 'Swaziland',
-            'SE' => 'Sweden',
-            'CH' => 'Switzerland',
-            'SY' => 'Syrian Arab Republic',
-            'TW' => 'Taiwan, Province of China',
-            'TJ' => 'Tajikistan',
-            'TZ' => 'Tanzania, United Republic of',
-            'TH' => 'Thailand',
-            'TL' => 'Timor-leste',
-            'TG' => 'Togo',
-            'TK' => 'Tokelau',
-            'TO' => 'Tonga',
-            'TT' => 'Trinidad and Tobago',
-            'TN' => 'Tunisia',
-            'TR' => 'Turkey',
-            'TM' => 'Turkmenistan',
-            'TC' => 'Turks and Caicos Islands',
-            'TV' => 'Tuvalu',
-            'UG' => 'Uganda',
-            'UA' => 'Ukraine',
-            'AE' => 'United Arab Emirates',
-            'GB' => 'United Kingdom',
-            'US' => 'United States',
-            'UM' => 'United States Minor Outlying Islands',
-            'UY' => 'Uruguay',
-            'UZ' => 'Uzbekistan',
-            'VU' => 'Vanuatu',
-            'VE' => 'Venezuela',
-            'VN' => 'Viet Nam',
-            'VG' => 'Virgin Islands, British',
-            'VI' => 'Virgin Islands, U.S.',
-            'WF' => 'Wallis and Futuna',
-            'EH' => 'Western Sahara',
-            'YE' => 'Yemen',
-            'ZM' => 'Zambia',
-            'ZW' => 'Zimbabwe',
-        ];
-
-        return $this->select($name, $list, $selected, $options);
-    }
-
-    /**
-     * @param  $name
-     * @param  null     $selected
-     * @param  array    $options
+     * @param  null $selected
+     * @param  array $options
      * @return string
      */
     public function selectCountryAlpha3($name, $selected = null, $options = array())
     {
         $list = [
-            ''    => 'Select One...',
+            '' => 'Select One...',
             'AFG' => 'Afghanistan',
             'ALA' => 'Åland Islands',
             'ALB' => 'Albania',
@@ -995,54 +986,53 @@ trait Dropdowns
             'ZMB' => 'Zambia',
             'ZWE' => 'Zimbabwe',
         ];
-
         return $this->select($name, $list, $selected, $options);
     }
 
     /**
      * @param  $name
-     * @param  null     $selected
-     * @param  array    $options
+     * @param  null $selected
+     * @param  array $options
      * @return string
      */
     public function selectCountryNumeric($name, $selected = null, $options = array())
     {
         $list = [
-            ''    => 'Select One...',
-            '4'   => 'Afghanistan',
+            '' => 'Select One...',
+            '4' => 'Afghanistan',
             '248' => 'Åland Islands',
-            '8'   => 'Albania',
-            '12'  => 'Algeria',
-            '16'  => 'American Samoa',
-            '20'  => 'Andorra',
-            '24'  => 'Angola',
+            '8' => 'Albania',
+            '12' => 'Algeria',
+            '16' => 'American Samoa',
+            '20' => 'Andorra',
+            '24' => 'Angola',
             '660' => 'Anguilla',
-            '10'  => 'Antarctica',
-            '28'  => 'Antigua and Barbuda',
-            '32'  => 'Argentina',
-            '51'  => 'Armenia',
+            '10' => 'Antarctica',
+            '28' => 'Antigua and Barbuda',
+            '32' => 'Argentina',
+            '51' => 'Armenia',
             '533' => 'Aruba',
-            '36'  => 'Australia',
-            '40'  => 'Austria',
-            '31'  => 'Azerbaijan',
-            '44'  => 'Bahamas',
-            '48'  => 'Bahrain',
-            '50'  => 'Bangladesh',
-            '52'  => 'Barbados',
+            '36' => 'Australia',
+            '40' => 'Austria',
+            '31' => 'Azerbaijan',
+            '44' => 'Bahamas',
+            '48' => 'Bahrain',
+            '50' => 'Bangladesh',
+            '52' => 'Barbados',
             '112' => 'Belarus',
-            '56'  => 'Belgium',
-            '84'  => 'Belize',
+            '56' => 'Belgium',
+            '84' => 'Belize',
             '204' => 'Benin',
-            '60'  => 'Bermuda',
-            '64'  => 'Bhutan',
-            '68'  => 'Bolivia, Plurinational State of',
+            '60' => 'Bermuda',
+            '64' => 'Bhutan',
+            '68' => 'Bolivia, Plurinational State of',
             '535' => 'Bonaire, Sint Eustatius and Saba',
-            '70'  => 'Bosnia and Herzegovina',
-            '72'  => 'Botswana',
-            '74'  => 'Bouvet Island',
-            '76'  => 'Brazil',
-            '86'  => 'British Indian Ocean Territory',
-            '96'  => 'Brunei Darussalam',
+            '70' => 'Bosnia and Herzegovina',
+            '72' => 'Botswana',
+            '74' => 'Bouvet Island',
+            '76' => 'Brazil',
+            '86' => 'British Indian Ocean Territory',
+            '96' => 'Brunei Darussalam',
             '100' => 'Bulgaria',
             '854' => 'Burkina Faso',
             '108' => 'Burundi',
@@ -1212,7 +1202,7 @@ trait Dropdowns
             '534' => 'Sint Maarten (Dutch part)',
             '703' => 'Slovakia',
             '705' => 'Slovenia',
-            '90'  => 'Solomon Islands',
+            '90' => 'Solomon Islands',
             '706' => 'Somalia',
             '710' => 'South Africa',
             '239' => 'South Georgia and the South Sandwich Islands',
@@ -1251,7 +1241,7 @@ trait Dropdowns
             '548' => 'Vanuatu',
             '862' => 'Venezuela, Bolivarian Republic of',
             '704' => 'Viet Nam',
-            '92'  => 'Virgin Islands, British',
+            '92' => 'Virgin Islands, British',
             '850' => 'Virgin Islands, U.S.',
             '876' => 'Wallis and Futuna',
             '732' => 'Western Sahara',
@@ -1259,31 +1249,27 @@ trait Dropdowns
             '894' => 'Zambia',
             '716' => 'Zimbabwe',
         ];
-
         return $this->select($name, $list, $selected, $options);
     }
 
     /**
      * @param  $name
-     * @param  null    $selected
-     * @param  array   $options
+     * @param  null $selected
+     * @param  array $options
      * @return mixed
      */
     public function selectTimezone($name, $selected = null, $options = array())
     {
         $list = [];
-        $utc  = new \DateTimeZone('UTC');
-        $dt   = new \DateTime('now', $utc);
-
+        $utc = new \DateTimeZone('UTC');
+        $dt = new \DateTime('now', $utc);
         foreach (\DateTimeZone::listIdentifiers() as $tz) {
             $current_tz = new \DateTimeZone($tz);
-            $offset     = $current_tz->getOffset($dt);
+            $offset = $current_tz->getOffset($dt);
             $transition = $current_tz->getTransitions($dt->getTimestamp(), $dt->getTimestamp());
-            $abbr       = $transition[0]['abbr'];
-
+            $abbr = $transition[0]['abbr'];
             $list[$tz] = $tz . ' [' . $abbr . ' ' . $this->formatOffset($offset) . ']';
         }
-
         return $this->select($name, $list, $selected, $options);
     }
 
@@ -1293,12 +1279,11 @@ trait Dropdowns
      */
     private function formatOffset($offset)
     {
-        $hours     = $offset / 3600;
+        $hours = $offset / 3600;
         $remainder = $offset % 3600;
-        $sign      = $hours > 0 ? '+' : '-';
-        $hour      = (int) abs($hours);
-        $minutes   = (int) abs($remainder / 60);
-
+        $sign = $hours > 0 ? '+' : '-';
+        $hour = (int)abs($hours);
+        $minutes = (int)abs($remainder / 60);
         if ($hour == 0 && $minutes == 0) {
             $sign = ' ';
         }

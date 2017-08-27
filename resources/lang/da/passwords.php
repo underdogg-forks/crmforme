@@ -1,7 +1,5 @@
 <?php
-
 return [
-
     /*
     |--------------------------------------------------------------------------
     | Password Reset Language Lines
@@ -12,7 +10,6 @@ return [
     | has failed, such as for an invalid token or invalid new password.
     |
     */
-
     'password' => 'Adgangskoder skal være mindst seks tegn og matche bekræftelsen.',
     'reset' => 'Din adgangskode er blevet nulstillet!',
     'sent' => 'Vi har sendt dig et link til at nulstille din adgangskode!',

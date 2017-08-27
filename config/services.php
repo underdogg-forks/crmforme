@@ -1,7 +1,5 @@
 <?php
-
 return [
-
     /*
     |--------------------------------------------------------------------------
     | Third Party Services
@@ -13,32 +11,26 @@ return [
     | to have a conventional place to find your various credentials.
     |
     */
-
     'mailgun' => [
         'domain' => env('MAILGUN_DOMAIN'),
         'secret' => env('MAILGUN_SECRET'),
     ],
-
     'mandrill' => [
         'secret' => env('MANDRILL_SECRET'),
     ],
-
     'ses' => [
         'key' => env('SES_KEY'),
         'secret' => env('SES_SECRET'),
         'region' => 'us-east-1',
     ],
-
     'sparkpost' => [
         'secret' => env('SPARKPOST_SECRET'),
     ],
-
     'stripe' => [
-        'model'  => App\Models\Access\User\User::class,
-        'key'    => env('STRIPE_KEY'),
+        'model' => App\Models\Access\User\User::class,
+        'key' => env('STRIPE_KEY'),
         'secret' => env('STRIPE_SECRET'),
     ],
-
     /**
      * Socialite Credentials
      * Redirect URL's need to be the same as specified on each network you set up this application on
@@ -48,7 +40,6 @@ return [
      * Docs: https://github.com/laravel/socialite
      * Make sure 'scopes' and 'with' are arrays, if their are none, use empty arrays []
      */
-
     'bitbucket' => [
         'client_id' => env('BITBUCKET_CLIENT_ID'),
         'client_secret' => env('BITBUCKET_CLIENT_SECRET'),
@@ -56,16 +47,14 @@ return [
         'scopes' => [],
         'with' => [],
     ],
-
     'facebook' => [
         'client_id' => env('FACEBOOK_CLIENT_ID'),
         'client_secret' => env('FACEBOOK_CLIENT_SECRET'),
         'redirect' => env('FACEBOOK_REDIRECT'),
         'scopes' => [],
         'with' => [],
-		'fields' => [],
+        'fields' => [],
     ],
-
     'github' => [
         'client_id' => env('GITHUB_CLIENT_ID'),
         'client_secret' => env('GITHUB_CLIENT_SECRET'),
@@ -73,12 +62,10 @@ return [
         'scopes' => [],
         'with' => [],
     ],
-
     'google' => [
         'client_id' => env('GOOGLE_CLIENT_ID'),
         'client_secret' => env('GOOGLE_CLIENT_SECRET'),
         'redirect' => env('GOOGLE_REDIRECT'),
-
         /**
          * Only allows google to grab email address
          * Default scopes array also has: 'https://www.googleapis.com/auth/plus.login'
@@ -88,19 +75,16 @@ return [
             'https://www.googleapis.com/auth/plus.me',
             'https://www.googleapis.com/auth/plus.profile.emails.read',
         ],
-
         'with' => [],
     ],
-
     'linkedin' => [
         'client_id' => env('LINKEDIN_CLIENT_ID'),
         'client_secret' => env('LINKEDIN_CLIENT_SECRET'),
         'redirect' => env('LINKEDIN_REDIRECT'),
         'scopes' => [],
         'with' => [],
-		'fields' => [],
+        'fields' => [],
     ],
-
     'twitter' => [
         'client_id' => env('TWITTER_CLIENT_ID'),
         'client_secret' => env('TWITTER_CLIENT_SECRET'),

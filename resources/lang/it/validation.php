@@ -1,7 +1,5 @@
 <?php
-
 return [
-
     /*
     |--------------------------------------------------------------------------
     | Validation Language Lines
@@ -12,76 +10,74 @@ return [
     | as the size rules. Feel free to tweak each of these messages here.
     |
     */
-
-    'accepted'             => ':attribute deve essere accettato.',
-    'active_url'           => ':attribute non è un URL valido.',
-    'after'                => ':attribute deve essere una data successiva a :date.',
-    'alpha'                => ':attribute può contenere solo lettere.',
-    'alpha_dash'           => ':attribute può contenere solo lettere, numeri e trattini.',
-    'alpha_num'            => ':attribute può contenere solo lettere e numeri.',
-    'array'                => ':attribute deve essere un array.',
-    'before'               => ':attribute deve essere una data precedente al :date.',
-    'between'              => [
+    'accepted' => ':attribute deve essere accettato.',
+    'active_url' => ':attribute non è un URL valido.',
+    'after' => ':attribute deve essere una data successiva a :date.',
+    'alpha' => ':attribute può contenere solo lettere.',
+    'alpha_dash' => ':attribute può contenere solo lettere, numeri e trattini.',
+    'alpha_num' => ':attribute può contenere solo lettere e numeri.',
+    'array' => ':attribute deve essere un array.',
+    'before' => ':attribute deve essere una data precedente al :date.',
+    'between' => [
         'numeric' => ':attribute deve avere un valore tra :min e :max.',
-        'file'    => ':attribute deve essere tra :min e :max kilobytes.',
-        'string'  => ':attribute deve avere tra :min e :max caratteri.',
-        'array'   => ':attribute deve contenere tra :min e :max elementi.',
+        'file' => ':attribute deve essere tra :min e :max kilobytes.',
+        'string' => ':attribute deve avere tra :min e :max caratteri.',
+        'array' => ':attribute deve contenere tra :min e :max elementi.',
     ],
-    'boolean'              => ':attribute può essere solo vero o falso.',
-    'confirmed'            => 'La conferma di :attribute non corrisponde.',
-    'date'                 => ':attribute non è una data valida.',
-    'date_format'          => ':attribute non corrisponde al formato :format.',
-    'different'            => ':attribute e :other devono essere diversi.',
-    'digits'               => ':attribute deve avere :digits cifre.',
-    'digits_between'       => ':attribute deve avere tra :min e :max cifre.',
-    'dimensions'           => 'The :attribute has invalid image dimensions.',
-    'distinct'             => 'The :attribute field has a duplicate value.',
-    'email'                => ':attribute deve essere un indirizzo email valido.',
-    'exists'               => 'La selezione per :attribute non è valida.',
-    'file'                 => 'The :attribute must be a file.',
-    'filled'               => ':attribute è obbligatorio.',
-    'image'                => ":attribute deve essere un'immagine.",
-    'in'                   => 'La selezione per :attribute non è valida.',
-    'in_array'             => 'The :attribute field does not exist in :other.',
-    'integer'              => ':attribute deve essere un numero intero.',
-    'ip'                   => ':attribute deve essere un indirizzo IP valido.',
-    'json'                 => ':attribute deve essere una stringa JSON valida.',
-    'max'                  => [
+    'boolean' => ':attribute può essere solo vero o falso.',
+    'confirmed' => 'La conferma di :attribute non corrisponde.',
+    'date' => ':attribute non è una data valida.',
+    'date_format' => ':attribute non corrisponde al formato :format.',
+    'different' => ':attribute e :other devono essere diversi.',
+    'digits' => ':attribute deve avere :digits cifre.',
+    'digits_between' => ':attribute deve avere tra :min e :max cifre.',
+    'dimensions' => 'The :attribute has invalid image dimensions.',
+    'distinct' => 'The :attribute field has a duplicate value.',
+    'email' => ':attribute deve essere un indirizzo email valido.',
+    'exists' => 'La selezione per :attribute non è valida.',
+    'file' => 'The :attribute must be a file.',
+    'filled' => ':attribute è obbligatorio.',
+    'image' => ":attribute deve essere un'immagine.",
+    'in' => 'La selezione per :attribute non è valida.',
+    'in_array' => 'The :attribute field does not exist in :other.',
+    'integer' => ':attribute deve essere un numero intero.',
+    'ip' => ':attribute deve essere un indirizzo IP valido.',
+    'json' => ':attribute deve essere una stringa JSON valida.',
+    'max' => [
         'numeric' => ':attribute non può essere più grande di :max.',
-        'file'    => ':attribute non può superare i :max kilobytes.',
-        'string'  => ':attribute non può superare i :max caratteri.',
-        'array'   => ':attribute non può avere più di :max elementi.',
+        'file' => ':attribute non può superare i :max kilobytes.',
+        'string' => ':attribute non può superare i :max caratteri.',
+        'array' => ':attribute non può avere più di :max elementi.',
     ],
-    'mimes'                => ':attribute deve essere un file di questo formato: :values.',
-    'min'                  => [
+    'mimes' => ':attribute deve essere un file di questo formato: :values.',
+    'min' => [
         'numeric' => ':attribute deve essere almeno :min.',
-        'file'    => ':attribute deve essere di almeno :min kilobytes.',
-        'string'  => ':attribute deve contenere almeno :min caratteri.',
-        'array'   => ':attribute deve avere almeno :min elementi.',
+        'file' => ':attribute deve essere di almeno :min kilobytes.',
+        'string' => ':attribute deve contenere almeno :min caratteri.',
+        'array' => ':attribute deve avere almeno :min elementi.',
     ],
-    'not_in'               => 'Il valore selezionato per :attribute non è valido.',
-    'numeric'              => ':attribute deve essere un numero.',
-    'present'              => 'The :attribute field must be present.',
-    'regex'                => 'Il formato di :attribute non è valido.',
-    'required'             => ':attribute è richiesto.',
-    'required_if'          => ':attribute è richiesto quando :other è :value.',
-    'required_unless'      => ':attribute è richiesto se :other non è tra :values.',
-    'required_with'        => ':attribute è richiesto quando :values è presente.',
-    'required_with_all'    => ':attribute è richiesto quando :values è presente.',
-    'required_without'     => ':attribute è richiesto quando :values non è presente.',
+    'not_in' => 'Il valore selezionato per :attribute non è valido.',
+    'numeric' => ':attribute deve essere un numero.',
+    'present' => 'The :attribute field must be present.',
+    'regex' => 'Il formato di :attribute non è valido.',
+    'required' => ':attribute è richiesto.',
+    'required_if' => ':attribute è richiesto quando :other è :value.',
+    'required_unless' => ':attribute è richiesto se :other non è tra :values.',
+    'required_with' => ':attribute è richiesto quando :values è presente.',
+    'required_with_all' => ':attribute è richiesto quando :values è presente.',
+    'required_without' => ':attribute è richiesto quando :values non è presente.',
     'required_without_all' => ':attribute è richiesto quando nessuno tra :values è presente.',
-    'same'                 => ':attribute e :other devono essere identici.',
-    'size'                 => [
+    'same' => ':attribute e :other devono essere identici.',
+    'size' => [
         'numeric' => ':attribute deve essere :size.',
-        'file'    => ':attribute deve essere di :size kilobytes.',
-        'string'  => ':attribute deve contenere :size caratteri.',
-        'array'   => ':attribute deve contenere :size elementi.',
+        'file' => ':attribute deve essere di :size kilobytes.',
+        'string' => ':attribute deve contenere :size caratteri.',
+        'array' => ':attribute deve contenere :size elementi.',
     ],
-    'string'               => ':attribute deve essere una stringa.',
-    'timezone'             => ':attribute deve essere un fuso orario valido.',
-    'unique'               => ':attribute è già stato utilizzato.',
-    'url'                  => 'Il formato di :attribute non è valido.',
-
+    'string' => ':attribute deve essere una stringa.',
+    'timezone' => ':attribute deve essere un fuso orario valido.',
+    'unique' => ':attribute è già stato utilizzato.',
+    'url' => 'Il formato di :attribute non è valido.',
     /*
     |--------------------------------------------------------------------------
     | Custom Validation Language Lines
@@ -92,13 +88,11 @@ return [
     | specify a specific custom language line for a given attribute rule.
     |
     */
-
     'custom' => [
         'attribute-name' => [
             'rule-name' => 'custom-message',
         ],
     ],
-
     /*
     |--------------------------------------------------------------------------
     | Custom Validation Attributes
@@ -109,9 +103,7 @@ return [
     | of "email". This simply helps us make messages a little cleaner.
     |
     */
-
     'attributes' => [
-
         'backend' => [
             'access' => [
                 'permissions' => [
@@ -120,21 +112,17 @@ return [
                     'display_name' => 'Nome visualizzato',
                     'group' => 'Gruppo',
                     'group_sort' => 'Ordina gruppo',
-
                     'groups' => [
                         'name' => 'Nome gruppo',
                     ],
-
                     'name' => 'Nome',
                     'system' => 'Sistema?',
                 ],
-
                 'roles' => [
                     'associated_permissions' => 'Permessi associati',
                     'name' => 'Nome',
                     'sort' => 'Ordina',
                 ],
-
                 'users' => [
                     'active' => 'Attivo',
                     'associated_roles' => 'Ruoli associati',
@@ -148,7 +136,6 @@ return [
                 ],
             ],
         ],
-
         'frontend' => [
             'email' => 'Indirizzo e-mail',
             'name' => 'Nome',
@@ -159,5 +146,4 @@ return [
             'new_password_confirmation' => 'Conferma nuova password',
         ],
     ],
-
 ];

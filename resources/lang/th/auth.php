@@ -1,7 +1,5 @@
 <?php
-
 return [
-
     /*
     |--------------------------------------------------------------------------
     | Authentication Language Lines
@@ -12,7 +10,6 @@ return [
     | these language lines according to your application's requirements.
     |
     */
-
     'failed' => 'ข้อมูลที่ใช้ในการยืนยันตัวตนไม่ถูกต้อง',
     'general_error' => 'คุณไม่มีสิทธิ์ในการเข้าถึงหรือกระทำการ',
     'socialite' => [

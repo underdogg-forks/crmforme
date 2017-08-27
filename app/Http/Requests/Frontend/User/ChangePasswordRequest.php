@@ -1,5 +1,4 @@
 <?php
-
 namespace App\Http\Requests\Frontend\User;
 
 use App\Http\Requests\Request;
@@ -29,7 +28,7 @@ class ChangePasswordRequest extends Request
     {
         return [
             'old_password' => 'required',
-            'password'     => 'required|min:6|confirmed',
+            'password' => 'required|min:6|confirmed',
         ];
     }
 }

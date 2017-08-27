@@ -1,7 +1,5 @@
 <?php
-
 return [
-
     /*
     |--------------------------------------------------------------------------
     | Menus Language Lines
@@ -12,11 +10,9 @@ return [
     | found in a intuitive way.
     |
     */
-
     'backend' => [
         'access' => [
             'title' => 'Adgangsadministration',
-
             'roles' => [
                 'all' => 'Alle Roller',
                 'create' => 'Opret Rolle',
@@ -24,7 +20,6 @@ return [
                 'management' => 'Rolleadministration',
                 'main' => 'Roller',
             ],
-
             'users' => [
                 'all' => 'Alle Brugere',
                 'change-password' => 'Skift Adgangskode',
@@ -35,19 +30,16 @@ return [
                 'main' => 'Brugere',
             ],
         ],
-
         'log-viewer' => [
             'main' => 'Logbog',
             'dashboard' => 'Dashboard',
             'logs' => 'Logbog',
         ],
-
         'sidebar' => [
             'dashboard' => 'Betjeningspanel',
             'general' => 'Generelt',
         ],
     ],
-
     'language-picker' => [
         'language' => 'Sprog',
         /**

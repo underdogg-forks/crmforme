@@ -1,5 +1,4 @@
 <?php
-
 namespace App\Services\Access\Traits;
 
 use App\Events\Frontend\Auth\UserRegistered;

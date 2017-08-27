@@ -1,5 +1,4 @@
 <?php
-
 namespace App\Http\Middleware;
 
 use Closure;
@@ -11,7 +10,7 @@ use Closure;
 class RouteNeedsPermission
 {
 
-	/**
+    /**
      * @param $request
      * @param Closure $next
      * @param $permission
@@ -32,14 +31,11 @@ class RouteNeedsPermission
              */
             $access = access()->allow($permission);
         }
-
-
-        if (! $access) {
+        if (!$access) {
             return redirect()
                 ->route('frontend.index')
                 ->withFlashDanger(trans('auth.general_error'));
         }
-
         return $next($request);
     }
 }

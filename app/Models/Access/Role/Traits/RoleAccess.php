@@ -1,7 +1,5 @@
 <?php
-
 namespace App\Models\Access\Role\Traits;
-
 /**
  * Class RoleAccess
  * @package App\Models\Access\Role\Traits
@@ -11,15 +9,28 @@ trait RoleAccess
     /**
      * Save the inputted permissions.
      *
-     * @param  mixed  $inputPermissions
+     * @param  mixed $inputPermissions
      * @return void
      */
     public function savePermissions($inputPermissions)
     {
-        if (! empty($inputPermissions)) {
+        if (!empty($inputPermissions)) {
             $this->permissions()->sync($inputPermissions);
         } else {
             $this->permissions()->detach();
+        }
+    }
+
+    /**
+     * Attach multiple permissions to current role.
+     *
+     * @param  mixed $permissions
+     * @return void
+     */
+    public function attachPermissions($permissions)
+    {
+        foreach ($permissions as $permission) {
+            $this->attachPermission($permission);
         }
     }
 
@@ -34,12 +45,23 @@ trait RoleAccess
         if (is_object($permission)) {
             $permission = $permission->getKey();
         }
-
         if (is_array($permission)) {
             $permission = $permission['id'];
         }
-
         $this->permissions()->attach($permission);
+    }
+
+    /**
+     * Detach multiple permissions from current role
+     *
+     * @param  mixed $permissions
+     * @return void
+     */
+    public function detachPermissions($permissions)
+    {
+        foreach ($permissions as $permission) {
+            $this->detachPermission($permission);
+        }
     }
 
     /**
@@ -53,37 +75,9 @@ trait RoleAccess
         if (is_object($permission)) {
             $permission = $permission->getKey();
         }
-
         if (is_array($permission)) {
             $permission = $permission['id'];
         }
-
         $this->permissions()->detach($permission);
-    }
-
-    /**
-     * Attach multiple permissions to current role.
-     *
-     * @param  mixed  $permissions
-     * @return void
-     */
-    public function attachPermissions($permissions)
-    {
-        foreach ($permissions as $permission) {
-            $this->attachPermission($permission);
-        }
-    }
-
-    /**
-     * Detach multiple permissions from current role
-     *
-     * @param  mixed  $permissions
-     * @return void
-     */
-    public function detachPermissions($permissions)
-    {
-        foreach ($permissions as $permission) {
-            $this->detachPermission($permission);
-        }
     }
 }

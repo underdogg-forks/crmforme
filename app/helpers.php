@@ -1,11 +1,9 @@
 <?php
-
 /**
  * Global helpers file with misc functions
  *
  */
-
-if (! function_exists('app_name')) {
+if (!function_exists('app_name')) {
     /**
      * Helper to grab the application name
      *
@@ -16,8 +14,7 @@ if (! function_exists('app_name')) {
         return config('app.name');
     }
 }
-
-if (! function_exists('access')) {
+if (!function_exists('access')) {
     /**
      * Access (lol) the Access:: facade as a simple function
      */
@@ -26,9 +23,7 @@ if (! function_exists('access')) {
         return app('access');
     }
 }
-
-if ( ! function_exists('history'))
-{
+if (!function_exists('history')) {
     /**
      * Access the history facade anywhere
      */
@@ -37,8 +32,7 @@ if ( ! function_exists('history'))
         return app('history');
     }
 }
-
-if (! function_exists('javascript')) {
+if (!function_exists('javascript')) {
     /**
      * Access the javascript helper
      */
@@ -47,8 +41,7 @@ if (! function_exists('javascript')) {
         return app('JavaScript');
     }
 }
-
-if (! function_exists('gravatar')) {
+if (!function_exists('gravatar')) {
     /**
      * Access the gravatar helper
      */
@@ -57,8 +50,7 @@ if (! function_exists('gravatar')) {
         return app('gravatar');
     }
 }
-
-if (! function_exists('getFallbackLocale')) {
+if (!function_exists('getFallbackLocale')) {
     /**
      * Get the fallback locale
      *
@@ -69,9 +61,7 @@ if (! function_exists('getFallbackLocale')) {
         return config('app.fallback_locale');
     }
 }
-
-if (! function_exists('getLanguageBlock')) {
-
+if (!function_exists('getLanguageBlock')) {
     /**
      * Get the language block with a fallback
      *
@@ -82,9 +72,8 @@ if (! function_exists('getLanguageBlock')) {
     function getLanguageBlock($view, $data = [])
     {
         $components = explode("lang", $view);
-        $current  = $components[0]."lang.".app()->getLocale().".".$components[1];
-        $fallback  = $components[0]."lang.".getFallbackLocale().".".$components[1];
-
+        $current = $components[0] . "lang." . app()->getLocale() . "." . $components[1];
+        $fallback = $components[0] . "lang." . getFallbackLocale() . "." . $components[1];
         if (view()->exists($current)) {
             return view($current, $data);
         } else {

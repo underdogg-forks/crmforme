@@ -1,5 +1,4 @@
 <?php
-
 namespace App\Http;
 
 use Illuminate\Foundation\Http\Kernel as HttpKernel;
@@ -35,14 +34,12 @@ class Kernel extends HttpKernel
             \App\Http\Middleware\VerifyCsrfToken::class,
             \App\Http\Middleware\LocaleMiddleware::class,
         ],
-
         'admin' => [
             'web',
             'auth',
             'access.routeNeedsPermission:view-backend',
             'timeout',
         ],
-
         'api' => [
             'throttle:60,1',
         ],
@@ -62,7 +59,6 @@ class Kernel extends HttpKernel
         'guest' => \App\Http\Middleware\RedirectIfAuthenticated::class,
         'throttle' => \Illuminate\Routing\Middleware\ThrottleRequests::class,
         'timeout' => \App\Http\Middleware\SessionTimeout::class,
-
         /**
          * Access Middleware
          */

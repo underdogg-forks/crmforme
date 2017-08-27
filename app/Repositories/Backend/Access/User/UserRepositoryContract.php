@@ -1,5 +1,4 @@
 <?php
-
 namespace App\Repositories\Backend\Access\User;
 
 use App\Models\Access\User\User;
@@ -11,7 +10,7 @@ use App\Models\Access\User\User;
 interface UserRepositoryContract
 {
 
-	/**
+    /**
      * @param int $status
      * @param bool $trashed
      * @return mixed
@@ -65,19 +64,19 @@ interface UserRepositoryContract
      */
     public function updatePassword(User $user, $input);
 
-	/**
+    /**
      * @param User $user
      * @return mixed
      */
     public function loginAs(User $user);
 
-	/**
+    /**
      * @return mixed
      */
     public function logoutAs();
 
-	/**
-	 * @return mixed
-	 */
-	public function flushTempSession();
+    /**
+     * @return mixed
+     */
+    public function flushTempSession();
 }

@@ -1,5 +1,4 @@
 <?php
-
 namespace App\Http\Requests\Frontend\User;
 
 use App\Http\Requests\Request;
@@ -28,7 +27,7 @@ class UpdateProfileRequest extends Request
     public function rules()
     {
         return [
-            'name'  => 'required',
+            'name' => 'required',
             'email' => 'sometimes|required|email',
         ];
     }

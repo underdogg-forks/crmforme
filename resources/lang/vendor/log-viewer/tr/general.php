@@ -1,6 +1,5 @@
 <?php
-
 return [
-    'all'  => 'Toplam',
+    'all' => 'Toplam',
     'date' => 'Tarih',
 ];
